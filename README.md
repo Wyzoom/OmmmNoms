@@ -67,6 +67,7 @@ As a player I
 ## NMS mission structure
 A MISSION entity consists of a series of GenericMissionSequence's, which are stages
 
+```
 MIssionEntry
           Stage1
                  ScanEvent(condition that is being checked)
@@ -82,8 +83,6 @@ MIssionEntry
            Stage5 {GcMissionSequenceReward }
                  Reward = Item (RewardTabIeID)
 
-
-```
 Mission 
       Trigger
              Reward
