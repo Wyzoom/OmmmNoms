@@ -22,8 +22,87 @@ At this moment the toolchain is verified to work and we are  is moving towards a
 * You get the OmmmNoms code from here by forking or downloading, set up your modding toolchain, run the ModFactory with AMUMSS, pack and distribute your own mod.
 
 # Documentation
-(incoming)
+(WIP)
+## Writing a story of the mission
+* Using Inkle or any text editor, start a .ink document
+  * HeloWorld tutorial mission is WIP
+* You communicate whith the mission factory using ink #tags. Tags are attached eitther to the highest level, specifying mission name, various properties. Tags attached to specific knows inform the factory of conditions that have to be met, rewards that have to be given and such. 
+    * Be aware that you will not be able to use variables in a usual sense, except to store  global static values. 
+    * We distinguish two concepts *book* and *strory*. Book is a static description of what is there and conditions. Story is an active playthrough, where various variables and states change. You can turn your book into a story by using the richt habd screen in Inkle, or my ruiing the inkToStory.lua script. 
+    * if inkToStory.lua can lay your story without errors, it willp probbably work as a mission.
+* NMS missions have stages, and each *stage* end with a *reward* This *reward* is either the next stage of the story, or a substance / product or a *puzzle*
+* all dialogues (either with NPCs or with any object in the world)  are *puzzles* to NMS, which consist of a text describing  what they say, and a number of choices we as a player can make.
+  * a choice always leads to a *reward*, which as mentioned can be a new *puzzle* (dialog option) or a new mission stage, or whatever
+ * you can *interact* with an object, without dialogue. In that case, there is an immedia *reward* which can be a change of state of object. Press switch on the waar, light turns on. Interaction is pressing the switch, reward is the light turning on
+ 
+  
 
+### Story elements
+From the perspective of the writer, we have the following to work with
+The world
+* Has : 
+  * various states, list is WIP
+* Does :
+  * Regularly performs a state update with a "scan", if a ScanCondition is being met, a ScanEvent is generated. This allows for "While flying towards the planet, X happens" or "As I enter the alen ruin, I hear a voice speak"
+  * There is a long list of possible ScanEvents, list is WIP
+
+As a player I  
+* Have :
+  * Substances & Products in my exosuit/ship/exocraft/freigther inventory
+  * Blueprints known and Technologies installed
+  * Location, inside, outside, in trade post, in ship
+  * status ( health, shield, etc)
+    
+* I do :
+  * interact with object / NPC
+  * Destroy objects with my multitool
+  * make choices during dialogues
+  * recieve "rewards"
+  * change what is in inventory
+  * install / remove technology
+
+(note that these list are  incomplete, but these kids of actions are translatable into mission events)
+
+
+## NMS mission structure
+A MISSION entity consists of a series of GenericMissionSequence's, which are stages
+
+MIssionEntry
+          Stage1
+                 ScanEvent(condition that is being checked)
+                     Condition
+          Stage2
+                ScanEvent(condition that is being checked)
+                     Condition
+          Stage3
+                 ScanEvent(condition that is being checked)
+                      Condition
+          Stage4 { GcMissionSequenceReward}
+                  Reward = RewardMission(RewardTabIeID)
+           Stage5 {GcMissionSequenceReward }
+                 Reward = Item (RewardTabIeID)
+
+
+ 
+Mission 
+      Trigger
+             Reward
+                    APE_ (alien puzzle)
+                        APO_(AlienPuzzleOption)
+                               APE_
+                                     APO_
+                                     APO_
+                        APO_(AlienPuzzleOption)
+                              *RewardMIssion = MissionEntry
+                        APO_(AlienPuzzleOption)
+                              EndEvent
+
+Mission
+      Trigger
+             Reward
+                    APE_ (alien puzzle)
+                            *RewardMission = MissionEntry
+           
 
 
 # Credits and thanks
