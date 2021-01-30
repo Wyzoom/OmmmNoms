@@ -102,7 +102,23 @@ Mission
              Reward
                     APE_ (alien puzzle)
                             *RewardMission = MissionEntry
-           
+   
+
+MIssionEntry
+          Stage1
+                 ScanEvent(condition that is being checked)
+                     Condition
+          Stage2
+                ScanEvent(condition that is being checked)
+                     Condition
+          Stage3
+                 ScanEvent(condition that is being checked)
+                      Condition
+          Stage4 { GcMissionSequenceReward}
+                  Reward = RewardMission(RewardTabIeID)
+           Stage5 {GcMissionSequenceReward }
+                 Reward = Item (RewardTabIeID)
+                
 ```
 
 # Credits and thanks
