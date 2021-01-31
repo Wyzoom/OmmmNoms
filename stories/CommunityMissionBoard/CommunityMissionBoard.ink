@@ -115,89 +115,46 @@ No matter how carefully, I listen, I just can not make out the words.
     -> dont_start_mission
 
 == mission_start ==
-I should head out to space.
-#IsInSpace = true
-#HasPerformedAScan = true
+I continue listening to the voice mesmerised, as the sounds continues shifting, crackling, fading in and out.  After a while, I realize tha there is a pattern in the noise. I set the ships computer to track the pattern. Yes, there is information in there!
 
+# ship_message: Anomalous coordinates identified
+"WARNING: Coordinates extracted from anomalous signal!" 
 
-*   [Leave station] {~ FlyingInSpace = true}
++ [Set course to anomalous coordinates?]
+    -> towards_the_signal
 
-{ FlyingInSpace :
--> space_encounter
-}
-
--> space_encounter
-
-== space_encounter ==
-#ShipMessage "Coordinates recieved" 
-I recieve coordinates
--> found_freighter
+== towards_the_signal ==
+# set_destination: Nearest Boundary Failure
 
 == found_freighter ==
+# interact_with: Bondary Failure
 
-As I land next to the freighter, it is clear that is has made its last trip.  Debris is scatered everywhere and  the warp engines are torn to shreds by the emergency warp core ejection.
+This is the source of the anomalous transmission. There is a message waiting for me.
 
-The bodies of the Gek crew are scattered throughout the mangled wreck. Scan is very clear : No lifesigns detected.  Not just that, but all of their exosuit and multitool technology is damaged. Strange. The only functioning piece of technology left is the emergency beacon, its lights pulsating angrily.
-
-As approach the beacon the same uneasy feeling starts creeping up by back, just like it did back at the station.
-
-+ [Examine the beacon]
++ [Download the data]
     -> interact_with_beacon
     
 + [Leave]
-    -> abandon_mission
+    -> towards_the_signal
 
 
 == interact_with_beacon ==
-~ InteractWithBeacon = true
-I switch on my exosuits comm interface, and connect it to the beacon. A power surge arcs and hits my life suport, leaving a nasty cloud of smoke and immediately triggering my suits toxicity warning.
+# mission_reward: comunity_mission_interface_blueprint
+-> build_interface
 
+== build_interface ==
+# have_community_mission_interface: true
 
-~ ExosuitMessage = " WARNING: Unexpected traces of Pugneum detected. Initalising gas purge." 
+-> mission_end
 
-  { ExosuitMessage }
-  
-Damn! These things are supposed to be holograpically separated from their antimater generators! Now my comm port is fused with the beacon.
-In the meantime, automatic download of the logs and cargo manifest is ongoing.
+== mission_end == 
+# interact_with: community_mission_interface
 
-~ ExosuitAction = "DamageWarning"
-~ ExosuitMessage = "WARNING: Malformatted data packet recieved. Logging for analysis."
-
-{ExosuitMessage}
-
-Damn, I had enough of this. I pull hard on the com interface, breaking it off at the port. Nooo, this is going to cost me at least 5  Activated Indum stacks to repair!
-
-Ah well, at least I got the damn manifest downloaded intact. Lets see... 
-Curious, only a single crate. Who charters an entire freighter with crew to ship a single crate?
-
-Well, standing around wondering about the facies of  excentric rich aliens is not going to earn me those nanite. Lets find that crate.
-
--> search_for_object
-
-== search_for_object ==
-I shoot the lock off the nearest crate and find a {ObjectNeeded}.
-
--> found_object
-
-== found_object == 
-
-Hmm, the client did say they wanted {ObjectNeeded}.
-
-Could this be it?
-*   [No?] -> search_for_object
-*   [Yes?] -> return_to_mission_board
-
-== return_to_mission_board == 
-
-Go to mission agent and recieve reward
-
--> END
-
-== abandon_mission ==
-This beacon is all kinds of wrong. Nah, forget it, no way I am touching that thing. I turn around, enter my ship and take to the stars.
+TODO write the first interaction with the interface
+# keep_mission_active: true
 -> END
 
 == dont_start_mission ==
-That Gek looks way to nervous. I wonder what is going on?. This does not feel right. No ammount of nanites is worth sleeping with the sentinels. 
-
+Dont bother
+TODO elaborate on nice end
 -> END
