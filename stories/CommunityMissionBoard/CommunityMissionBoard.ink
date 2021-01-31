@@ -100,7 +100,9 @@ VAR CommMessage = ""
 == mission_pickup ==
 # event_type: incoming_comm_message
 
-With some difficulty, the communicator tunes in to the signal. There is silence at first. Then, very faint, I can hear distorted words being spoken. 
+The incoming signal is unlike anything you have ever seen before. Carrier frequency oscilates, modulation makes no sense. Ship is struggly to keep tracking the signal, as it is shifting across the spectrum.
+
+With some difficulty, the communicator tunes in. There is silence at first. Then, very faint, I can hear distorted words being spoken. 
 I can hear the urgency in the voice, and who, or whatever, is trying to communicate with me clearly has a lot to say.
 
 No matter how carefully, I listen, I just can not make out the words.
