@@ -48,7 +48,19 @@ TODO //things to think about
 
 //dialogues
 
-TODO Figure out how to force a page break in the dialogue, before we get the next page of text.
+TODO Verify double enter forcing net page
+// Double enter forces the text to appear on next page of dialogue
+
+// trigger sounds?
+//<AUDIO>TXT_RadioNoise<>
+//<AUDIO>UI_Destination_Reached<>
+//<AUDIO>UI_Nanites_Received<>
+//<AUDIO>UI_NoWhereToLand<>
+
+//<STELLAR>– kzzzkkt –<> 
+//<SPECIAL>EXTREME GRAVITATIONAL EVENT<>
+//<TRADABLE>DETECTED<>
+//<TECHNOLOGY>NEUTRALISED<>
 
 
 TODO Figure out how to link to langauge files
@@ -125,7 +137,7 @@ I continue listening to the voice mesmerised, as the sounds continues shifting, 
 
 == towards_the_signal ==
 # set_destination: Nearest Boundary Failure
-
+-> DONE
 == found_freighter ==
 # interact_with: Bondary Failure
 
