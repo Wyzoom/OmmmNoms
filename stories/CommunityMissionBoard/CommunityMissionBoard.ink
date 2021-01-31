@@ -6,13 +6,13 @@
 
 
 // the name of this mission
-# title: The crashed freighter
+# title: Words between worlds
 
 //The subtitle of the mission
-# subtitle:  This is the mission subtitle
+# subtitle:  
 
 //The entire description when you select the mission
-# description: This is the extended mission description
+# description: Construct the anomalous signal interface
 
 // A short blurb of what you need to do
 # objective: Short mission objective
@@ -30,8 +30,9 @@
 
 TODO
 // mission category // this should be figured out from existing assets
+# mission_category: 
 
-//the starting knot. What is the opening stage of the mission?
+//the starting knot. What is the name of the knot that defines the opening stage of the mission?
 # starting_point = mission_pickup
 
 // mission class : Primary or Secondary - for the mission log on top / vs below
@@ -47,14 +48,14 @@ TODO //things to think about
 
 //dialogues
 
+TODO Figure out how to force a page break in the dialogue, before we get the next page of text.
 
-TODO
-//Figure out how to link to langauge files
 
-TODO
-// Figure out the unique tyeps of scan events
+TODO Figure out how to link to langauge files
 
-//For things that hae to happen for tory to pgroess, like externl conditions, we should
+TODO Figure out the unique types of scan events
+
+//For things that hae to happen for story to progress, like externl conditions, we should
 
 //Items : 4 types of default items. Ëach of these types can be any of the ~2000 items in substance tables
 // https://docs.google.com/spreadsheets/d/1J8WdrubKgo8A9hPY-hbQLq4eVrb3n3lZAgiI2J7ncAU/edit#gid=66931870
@@ -72,6 +73,10 @@ TODO
 // <Property name="BuildingLocation" value="Nearest" />
 
 
+
+// ink VARs have to be treated as global constants, since we will not be playing though / executing the story when converting ot the mission, just reading the document structure and content.
+// things that might change per know/mission stage must be tags.
+
 VAR ObjectNeeded = "SalvagedFrigateModule"
 VAR ObjectNeededIsInInventory = "false"
 
@@ -85,35 +90,27 @@ VAR ExosuitAction = ""
 VAR CommMessage = ""
 
 
-// General points 
-// ink VAR has to be treated as global constants
-// things that might change per know/mission stage must be tags.
-
 // dialogue can only lead to two types of things :
     // Another knot with a dialogue
     // a entry from a RewardTable
     
     // <Property name="Costs" />
 
-
 -> mission_pickup
-
 == mission_pickup ==
+# event_type: incoming_comm_message
+
+With some difficulty, the communicator tunes in to the signal. There is silence at first. Then, very faint, I can hear distorted words being spoken. 
+I can hear the urgency in the voice, and who, or whatever, is trying to communicate with me clearly has a lot to say.
+
+No matter how carefully, I listen, I just can not make out the words.
 
 
-"The client is concerned with the suddent lack of communication from the Gek freighter they had contracted to deliver them a single item. You mission is to locate the freighter, identify the reason for loss of contact and bring back the item. 
-As the item is of personal nature, your discretion is essential. The client promises to reward you handsomely."
-
-The mission agent shuffles nervously as I examine the mission details.
-
-
-+ [Accept the mission]
++ [Continue listening]
     -> mission_start
     
-+ [Leave]
++ [Close the connection]
     -> dont_start_mission
-
-
 
 == mission_start ==
 I should head out to space.
