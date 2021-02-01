@@ -1,45 +1,38 @@
-// Tags defined BEFORE the first knot are global and apply to this entire book
-// tages defined within a knot belong to that knot
-// all tags MUST have the following structure :
-// # tag_name: Some value that you want your tag to have
-// tag_name MUST NOT have spaces
-
-
 // the name of this mission
-# title: Words between worlds
+VAR title = "Words between worlds" 
 
 //The subtitle of the mission
-# subtitle:  
+VAR subtitle = "The subtitle of the mission"
 
 //The entire description when you select the mission
-# description: Construct the anomalous signal interface
+VAR description = "Construct the anomalous signal interface"
 
 // A short blurb of what you need to do
-# objective: Short mission objective
+VAR objective = "Short mission objective" 
 
 // The hint at the bottom of a page of what to do
-# page_hint = ""
+VAR page_hint = "This is a page hint"
 
 
 //The icon that appears as a marker and in the menu
 // This will be either a set of preset things from the game, or a custom icon you make ourself
-# icon = SOME_ICON_ID
+VAR icon = "SOME_ICON_ID"
 
 // mision priority ( probbaly has to be set fixed, we will see)
-# priority: 4
+VAR priority = "4"
 
 TODO
 // mission category // this should be figured out from existing assets
-# mission_category: 
+VAR mission_category = ""
 
 //the starting knot. What is the name of the knot that defines the opening stage of the mission?
-# starting_point = mission_pickup
+VAR starting_point = "mission_pickup"
 
 // mission class : Primary or Secondary - for the mission log on top / vs below
-# is_primary_mission:  true
+VAR is_primary_mission =  true
 
 // mission is critical
-# is_critical: false
+VAR is_critical = false
 
 TODO //things to think about
 //<Property name="AutoStart" value="None" />
@@ -85,8 +78,6 @@ TODO Figure out the unique types of scan events
 // <Property name="BuildingLocation" value="Nearest" />
 
 
-
-// ink VARs have to be treated as global constants, since we will not be playing though / executing the story when converting ot the mission, just reading the document structure and content.
 // things that might change per know/mission stage must be tags.
 
 VAR ObjectNeeded = "SalvagedFrigateModule"
@@ -110,7 +101,7 @@ VAR CommMessage = ""
 
 -> mission_pickup
 == mission_pickup ==
-# event_type: incoming_comm_message
+VAR event_type = "incoming_comm_message"
 
 The incoming signal is unlike anything you have ever seen before. Carrier frequency oscilates, modulation makes no sense. Ship is struggly to keep tracking the signal, as it is shifting across the spectrum.
 
@@ -129,17 +120,17 @@ No matter how carefully, I listen, I just can not make out the words.
 == mission_start ==
 I continue listening to the voice mesmerised, as the sounds continues shifting, crackling, fading in and out.  After a while, I realize tha there is a pattern in the noise. I set the ships computer to track the pattern. Yes, there is information in there!
 
-# ship_message: Anomalous coordinates identified
+VAR ship_message = "Anomalous coordinates identified"
 "WARNING: Coordinates extracted from anomalous signal!" 
 
 + [Set course to anomalous coordinates?]
     -> towards_the_signal
 
 == towards_the_signal ==
-# set_destination: Nearest Boundary Failure
+VAR set_destination = "Nearest Boundary Failure"
 -> DONE
 == found_freighter ==
-# interact_with: Bondary Failure
+VAR interact_with = "Bondary Failure"
 
 This is the source of the anomalous transmission. There is a message waiting for me.
 
@@ -151,11 +142,11 @@ This is the source of the anomalous transmission. There is a message waiting for
 
 
 == interact_with_beacon ==
-# mission_reward: comunity_mission_interface_blueprint
+VAR mission_reward = "comunity_mission_interface_blueprint"
 -> build_interface
 
 == build_interface ==
-# have_community_mission_interface: true
+VAR is_community_mission_interface_present = true
 
 -> mission_end
 
