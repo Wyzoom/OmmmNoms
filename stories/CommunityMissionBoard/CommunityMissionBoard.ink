@@ -103,7 +103,7 @@ VAR event_type = ""
 
 -> mission_pickup
 == mission_pickup ==
-{~ event_type = "incoming_comm_message"}
+~ event_type = "incoming_comm_message"
 
 
 The incoming signal is unlike anything you have ever seen before. Carrier frequency oscilates, modulation makes no sense. Ship is struggly to keep tracking the signal, as it is shifting across the spectrum.
