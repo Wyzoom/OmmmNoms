@@ -124,7 +124,7 @@ No matter how carefully, I listen, I just can not make out the words.
 I continue listening to the voice mesmerised, as the sounds continues shifting, crackling, fading in and out.  After a while, I realize tha there is a pattern in the noise. I set the ships computer to track the pattern. Yes, there is information in there!
 
 VAR ship_message = "Anomalous coordinates identified"
-"WARNING: Coordinates extracted from anomalous signal!" 
+"<AUDIO>TXT_RadioNoise<>WARNING: Coordinates extracted from anomalous signal!" 
 
 + [Set course to anomalous coordinates?]
     -> towards_the_signal
