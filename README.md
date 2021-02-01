@@ -8,8 +8,8 @@ The OmmmNoms mod introduces a new main mission category, Community Missions, in 
 The goal is twofold :
 * Make custom No Mans Sky mission creation as easy as possible.
   * Creating a interesting mod requires a great deal of software development skills and has a steep learning curve. Creating an interesting and engaging missions requires creative writing skills. These two skills are not often found in one person. We want to lower the difficulty of the process of going from  writing a good story and converting it to a NMS mission and making it available for players.
-* Reverse engineer and document the NM mission structures
-  * The way missions are described in the NMS assets is fairly complex, and multi0layered. By documenting the structure and by creating a MissionFactory tool we hope to enable moders to add missions to their mods
+* Reverse engineer and document the NMS mission structures
+  * The way missions are described in the NMS assets is fairly complex, and multi-layered. By documenting the structure and by creating a MissionFactory tool we hope to enable moders to add missions to their mods
 
 ## Status
 At this moment the toolchain is verified to work and we are  is moving towards an initial release, containing the initial mission to acquire the community missions interface and the first chapter of a much longer story.
