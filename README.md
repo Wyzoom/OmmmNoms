@@ -26,8 +26,7 @@ At this moment the toolchain is verified to work and we are  is moving towards a
 ## Writing a story of the mission
 * Using Inkle or any text editor, start a .ink document
   * HeloWorld tutorial mission is WIP
-* You communicate with the mission factory using ink #tags. Tags are attached either to the highest level, specifying mission name, various properties. Tags attached to specific knows inform the factory of conditions that have to be met, rewards that have to be given and such. 
-    * Be aware that you will not be able to use variables in a usual sense, except to store  global static values. 
+* You communicate with the mission factory using constants CONST and variables VAR.
     * We distinguish two concepts *book* and *story*. Book is a static description of what is there and conditions. Story is an active playthrough, where various variables and states change. You can turn your book into a story by using the right hand screen in Inkle, or my running the inkToStory.lua script. 
     * if inkToStory.lua can play your story without errors, it will probably work as a mission.
 * NMS missions have stages, and each *stage* end with a *reward* This *reward* is either the next stage of the story, or a substance / product or a *puzzle*
