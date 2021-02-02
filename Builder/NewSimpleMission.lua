@@ -68,27 +68,34 @@ end
 --print(story.variables.event_type)
 print(SimpleMission)
 
+
+
 NMS_MOD_DEFINITION_CONTAINER =
 {
-  ["MOD_FILENAME"] = "DMission.pak",
-  ["MOD_AUTHOR"] = "Kiiritsugu",
-  ["MOD_DESCRIPTION"] = [[Demo Mission]],
-  ["NMS_VERSION"] = "3.10",
-  ["MODIFICATIONS"] =
-  {
-    {
-      ["PAK_FILE_SOURCE"] = "",
-      ["MBIN_CHANGE_TABLE"] =
-      {
-        ["MBIN_FILE_SOURCE"] 	= "",
-				["EXML_CHANGE_TABLE"] =
+  ["MOD_FILENAME"] 			= "BookBuilder.pak",
+  ["MOD_AUTHOR"]				= "Kiiritsugu",
+  ["MODIFICATIONS"] 		=
+	{
+		{
+			["PAK_FILE_SOURCE"] 	= "",
+			["MBIN_CHANGE_TABLE"] =
+			{
 				{
+					["MBIN_FILE_SOURCE"] 	= "\METADATA\SIMULATION\MISSIONS\NPCMISSIONTABLE.MBIN",
+					["EXML_CHANGE_TABLE"] =
 					{
-          }
-        }
-      }
-    }
-  }
+						{
+							["PRECEDING_KEY_WORDS"] = {"" },
+							["VALUE_CHANGE_TABLE"] 	=
+							{
+								{"IGNORE",	"IGNORE"},
+							}
+						},
+					}
+				},
+			}
+		},
+	}
 }
 
 
