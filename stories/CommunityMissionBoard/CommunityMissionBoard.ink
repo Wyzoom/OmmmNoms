@@ -1,38 +1,38 @@
 // the name of this mission
-VAR title = "Words between worlds" 
+CONST  title = "Words between worlds" 
 
 //The subtitle of the mission
-VAR subtitle = "The subtitle of the mission"
+CONST  subtitle = "The subtitle of the mission"
 
 //The entire description when you select the mission
-VAR description = "Construct the anomalous signal interface"
+CONST  description = "Construct the anomalous signal interface"
 
 // A short blurb of what you need to do
-VAR objective = "Short mission objective" 
+CONST  objective = "Short mission objective" 
 
 // The hint at the bottom of a page of what to do
-VAR page_hint = "This is a page hint"
+CONST  page_hint = "This is a page hint"
 
 
 //The icon that appears as a marker and in the menu
 // This will be either a set of preset things from the game, or a custom icon you make ourself
-VAR icon = "SOME_ICON_ID"
+CONST  icon = "SOME_ICON_ID"
 
 // mision priority ( probbaly has to be set fixed, we will see)
-VAR priority = "4"
+CONST  priority = "4"
 
 TODO
 // mission category // this should be figured out from existing assets
-VAR mission_category = ""
+CONST  mission_category = ""
 
 //the starting knot. What is the name of the knot that defines the opening stage of the mission?
-VAR starting_point = "mission_pickup"
+CONST  starting_point = "mission_pickup"
 
 // mission class : Primary or Secondary - for the mission log on top / vs below
-VAR is_primary_mission =  true
+CONST  is_primary_mission =  true
 
 // mission is critical
-VAR is_critical = false
+CONST  is_critical = false
 
 TODO //things to think about
 //<Property name="AutoStart" value="None" />
@@ -104,7 +104,7 @@ VAR event_type = ""
 -> mission_pickup
 == mission_pickup ==
 ~ event_type = "incoming_comm_message"
-
+~ FlyingInSpace = true
 
 The incoming signal is unlike anything you have ever seen before. Carrier frequency oscilates, modulation makes no sense. Ship is struggly to keep tracking the signal, as it is shifting across the spectrum.
 
