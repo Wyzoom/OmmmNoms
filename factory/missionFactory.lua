@@ -1,5 +1,8 @@
+
+package.path = package.path .. ";../lib/?.lua"
 local narrator = require 'narrator.narrator'
-local book = narrator.parseFile('ReadBook',{save = true})
+-- For testing
+local book = narrator.parseFile('../stories/testStories/ReadBook',{save = true})
 local story = narrator.initStory(book)
 local inspect = require 'inspect'
 
@@ -81,7 +84,7 @@ NMS_MOD_DEFINITION_CONTAINER =
 			["MBIN_CHANGE_TABLE"] =
 			{
 				{
-					["MBIN_FILE_SOURCE"] 	= "\METADATA\SIMULATION\MISSIONS\NPCMISSIONTABLE.MBIN",
+					["MBIN_FILE_SOURCE"] 	= "\\METADATA\\SIMULATION\\MISSIONS\\NPCMISSIONTABLE.MBIN",
 					["EXML_CHANGE_TABLE"] =
 					{
 						{
