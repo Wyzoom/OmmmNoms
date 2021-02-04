@@ -1,38 +1,46 @@
+CONST crit = "false"
+CONST x = "true"
+CONST y = 5 
+CONST h = "querty"
+
+LIST g = mclass, True, D_REP_SHIP_1, _1
+LIST t = mType, Primary
+VAR mission_class = "Secondary"
 // the name of this mission
-CONST  title = "Words between worlds" 
+VAR title = "Words between worlds" 
 
 //The subtitle of the mission
-CONST  subtitle = "The subtitle of the mission"
+VAR subtitle = "The subtitle of the mission"
 
 //The entire description when you select the mission
-CONST  description = "Construct the anomalous signal interface"
+VAR description = "Construct the anomalous signal interface"
 
 // A short blurb of what you need to do
-CONST  objective = "Short mission objective" 
+VAR objective = "Short mission objective" 
 
 // The hint at the bottom of a page of what to do
-CONST  page_hint = "This is a page hint"
+VAR page_hint = "This is a page hint"
 
 
 //The icon that appears as a marker and in the menu
 // This will be either a set of preset things from the game, or a custom icon you make ourself
-CONST  icon = "SOME_ICON_ID"
+VAR icon = "SOME_ICON_ID"
 
 // mision priority ( probbaly has to be set fixed, we will see)
-CONST  priority = "4"
+VAR priority = "4"
 
 TODO
 // mission category // this should be figured out from existing assets
-CONST  mission_category = ""
+VAR mission_category = ""
 
 //the starting knot. What is the name of the knot that defines the opening stage of the mission?
-CONST  starting_point = "mission_pickup"
+VAR starting_point = "mission_pickup"
 
 // mission class : Primary or Secondary - for the mission log on top / vs below
-CONST  is_primary_mission =  true
+VAR is_primary_mission =  true
 
 // mission is critical
-CONST  is_critical = false
+VAR is_critical = false
 
 TODO //things to think about
 //<Property name="AutoStart" value="None" />
@@ -99,13 +107,13 @@ VAR CommMessage = ""
     
     // <Property name="Costs" />
 
-VAR event_type = ""
+VAR event_type = "Secondary"
 
 -> mission_pickup
 == mission_pickup ==
+~is_critical = false
 ~ event_type = "incoming_comm_message"
-~ FlyingInSpace = true
-
+~ mission_class = "Secondary"
 The incoming signal is unlike anything you have ever seen before. Carrier frequency oscilates, modulation makes no sense. Ship is struggly to keep tracking the signal, as it is shifting across the spectrum.
 
 With some difficulty, the communicator tunes in. There is silence at first. Then, very faint, I can hear distorted words being spoken. 
@@ -124,7 +132,7 @@ No matter how carefully, I listen, I just can not make out the words.
 I continue listening to the voice mesmerised, as the sounds continues shifting, crackling, fading in and out.  After a while, I realize tha there is a pattern in the noise. I set the ships computer to track the pattern. Yes, there is information in there!
 
 VAR ship_message = "Anomalous coordinates identified"
-"<AUDIO>TXT_RadioNoise<>WARNING: Coordinates extracted from anomalous signal!" 
+"WARNING: Coordinates extracted from anomalous signal!" 
 
 + [Set course to anomalous coordinates?]
     -> towards_the_signal

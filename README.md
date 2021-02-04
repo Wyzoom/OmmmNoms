@@ -8,8 +8,8 @@ The OmmmNoms mod introduces a new main mission category, Community Missions, in 
 The goal is twofold :
 * Make custom No Mans Sky mission creation as easy as possible.
   * Creating a interesting mod requires a great deal of software development skills and has a steep learning curve. Creating an interesting and engaging missions requires creative writing skills. These two skills are not often found in one person. We want to lower the difficulty of the process of going from  writing a good story and converting it to a NMS mission and making it available for players.
-* Reverse engineer and document the NM mission structures
-  * The way missions are described in the NMS assets is fairly complex, and multi0layered. By documenting the structure and by creating a MissionFactory tool we hope to enable moders to add missions to their mods
+* Reverse engineer and document the NMS mission structures
+  * The way missions are described in the NMS assets is fairly complex, and multi-layered. By documenting the structure and by creating a MissionFactory tool we hope to enable moders to add missions to their mods
 
 ## Status
 At this moment the toolchain is verified to work and we are  is moving towards an initial release, containing the initial mission to acquire the community missions interface and the first chapter of a much longer story.
@@ -26,8 +26,7 @@ At this moment the toolchain is verified to work and we are  is moving towards a
 ## Writing a story of the mission
 * Using Inkle or any text editor, start a .ink document
   * HeloWorld tutorial mission is WIP
-* You communicate with the mission factory using ink #tags. Tags are attached either to the highest level, specifying mission name, various properties. Tags attached to specific knows inform the factory of conditions that have to be met, rewards that have to be given and such. 
-    * Be aware that you will not be able to use variables in a usual sense, except to store  global static values. 
+* You communicate with the mission factory using constants CONST and variables VAR.
     * We distinguish two concepts *book* and *story*. Book is a static description of what is there and conditions. Story is an active playthrough, where various variables and states change. You can turn your book into a story by using the right hand screen in Inkle, or my running the inkToStory.lua script. 
     * if inkToStory.lua can play your story without errors, it will probably work as a mission.
 * NMS missions have stages, and each *stage* end with a *reward* This *reward* is either the next stage of the story, or a substance / product or a *puzzle*
@@ -102,21 +101,6 @@ Mission
                     APE_ (alien puzzle)
                             *RewardMission = MissionEntry
    
-
-MIssionEntry
-          Stage1
-                 ScanEvent(condition that is being checked)
-                     Condition
-          Stage2
-                ScanEvent(condition that is being checked)
-                     Condition
-          Stage3
-                 ScanEvent(condition that is being checked)
-                      Condition
-          Stage4 { GcMissionSequenceReward}
-                  Reward = RewardMission(RewardTabIeID)
-           Stage5 {GcMissionSequenceReward }
-                 Reward = Item (RewardTabIeID)
                 
 ```
 
