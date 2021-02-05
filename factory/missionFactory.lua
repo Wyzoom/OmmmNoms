@@ -2,7 +2,7 @@
 package.path = package.path .. ";../lib/?.lua"
 local narrator = require 'narrator.narrator'
 -- For testing
-local book = narrator.parseFile('../stories/testStories/ReadBook',{save = true})
+local book = narrator.parseFile('stories/testStories.ReadBook.ink',{save = true})
 local story = narrator.initStory(book)
 local inspect = require 'inspect'
 
