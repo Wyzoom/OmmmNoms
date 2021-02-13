@@ -5,7 +5,7 @@ local lume = require('narrator.libs.lume')
 local enums = require('narrator.enums')
 
 -- Safe lpeg requiring
-local lpegName = 'lpeg'
+local lpegName = 'narrator.libs.lulpeg'
 if not pcall(require, lpegName) then return false end
 local lpeg = require(lpegName)
 
@@ -41,7 +41,7 @@ function Parser.parse(content)
   local divertSign = P'->'
   local gatherMark = sp * C('-' - divertSign)
   local gatherLevel = Cg(Ct(gatherMark ^ 1) / getLength + none, 'level')
-  
+
   local stickyMarks = Cg(Ct((sp * C('+')) ^ 1) / getLength, 'level') * Cg(Cc(true), 'sticky')
   local choiceMarks = Cg(Ct((sp * C('*')) ^ 1) / getLength, 'level') * Cg(Cc(false), 'sticky')
   local choiceLevel = stickyMarks + choiceMarks
@@ -99,7 +99,7 @@ function Parser.parse(content)
 
     -- Root
 
-    root = V'items' + eof,
+    root = ws * V'items' + eof,
     items = Ct(V'item' ^ 0),
 
     item = balancedMultilineItem() + V'singlelineItem',
@@ -122,14 +122,14 @@ function Parser.parse(content)
 
     -- Statements
 
-    statement = 
-      Ct(V'assignment' * itemType('assignment')) + 
+    statement =
+      Ct(V'assignment' * itemType('assignment')) +
       Ct(V'knot' * itemType('knot')) +
       Ct(V'stitch' * itemType('stitch')) +
       Ct(V'choice' * itemType('choice')) +
       comment + todo
     ,
-    
+
     sectionName = C(id) * sp * P'=' ^ 0,
     knot = P'==' * (P'=' ^ 0) * sp * Cg(V'sectionName', 'knot'),
     stitch = '=' * sp * Cg(V'sectionName', 'stitch'),
@@ -149,14 +149,14 @@ function Parser.parse(content)
     paragraphLabel = label * sp * Cg(V'textOptional', 'parts') * sp * V'tagsOptional',
     paragraphText = V'labelOptional' * sp * Cg(V'textComplex', 'parts') * sp * V'tagsOptional',
     paragraphTags = V'labelOptional' * sp * Cg(V'textOptional', 'parts') * sp * tags,
-    
+
     labelOptional = label + none,
     textOptional = V'textComplex' + none,
     tagsOptional = tags + none,
 
     textComplex = Ct((Ct(
-      Cg(V'inlineCondition', 'condition') + 
-      Cg(V'inlineSequence', 'sequence') + 
+      Cg(V'inlineCondition', 'condition') +
+      Cg(V'inlineSequence', 'sequence') +
       Cg(V'expression', 'expression') +
       Cg(V'text' + ' ', 'text') * (divert ^ -1) + divert
     ) - V'multilineItem') ^ 1),
@@ -170,7 +170,7 @@ function Parser.parse(content)
     inlineCondition = '{' * sp * Ct(V'inlineIfElse' + V'inlineIf') * sp * '}',
     inlineIf = Cg(sentenceBefore(S':}' + nl), 'condition') * sp * ':' * sp * Cg(V'textComplex', 'success'),
     inlineIfElse = (V'inlineIf') * sp * '|' * sp * Cg(V'textComplex', 'failure'),
-    
+
     inlineAltEmpty = Ct(Ct(Cg(sp * Cc'', 'text') * sp * divert ^ -1)),
     inlineAlt = V'textComplex' + V'inlineAltEmpty',
     inlineAlts = Ct(((sp * V'inlineAlt' * sp * '|') ^ 1) * sp * V'inlineAlt'),
@@ -187,7 +187,7 @@ function Parser.parse(content)
 
     switchComparative = Cg(V'switchCondition', 'expression') * ws * Cg(Ct((sp * V'switchCase') ^ 1), 'cases'),
     switchConditional = Cg(Ct(V'switchCasesHeaded' + V'switchCasesOnly'), 'cases'),
-    
+
     switchCasesHeaded = V'switchIf' * ((sp * V'switchCase') ^ 0),
     switchCasesOnly = ws * ((sp * V'switchCase') ^ 1),
 
@@ -197,7 +197,7 @@ function Parser.parse(content)
     switchItems = (V'restrictedItem' - V'switchCase') ^ 1,
 
     -- Multiline sequences
-    
+
     sequence = Ct((V'sequenceParams' * sp * nl * sp * V'sequenceAlts') * itemType('sequence')),
 
     sequenceParams = (
@@ -225,7 +225,7 @@ function Parser.parse(content)
       V'choice' * itemType('choice') +
       V'assignment' * itemType('assignment')
     ) + comment + todo,
-    
+
     restrictedParagraph = Ct((
       Cg(V'textComplex', 'parts') * sp * V'tagsOptional' +
       Cg(V'textOptional', 'parts') * sp * tags
@@ -239,17 +239,17 @@ function Parser.parse(content)
   local parsedItems = inkGrammar:match(content)
   local book = Constructor.constructBook(parsedItems)
   return book
-  
 end
 
 --
 -- A book construction
 
 function Constructor.constructBook(items)
-  
+
   local construction = {
     currentKnot = '_',
     currentStitch = '_',
+    variablesToCompute = { }
   }
 
   construction.book = {
@@ -264,13 +264,14 @@ function Constructor.constructBook(items)
     engine = enums.engineVersion,
     tree = 1
   }
-  
+
   construction.nodesChain = {
     construction.book.tree[construction.currentKnot][construction.currentStitch]
   }
 
   Constructor.addNode(construction, items)
   Constructor.clear(construction.book.tree)
+  Constructor.computeVariables(construction)
 
   return construction.book
 end
@@ -283,7 +284,7 @@ function Constructor:addNode(items, isRestricted)
     if isRestricted then
       -- Are not allowed inside multiline blocks by Ink rules:
       -- a) nesting levels
-      -- b) choices without diverts 
+      -- b) choices without diverts
 
       item.level = nil
       if item.type == 'choice' and item.divert == nil then
@@ -300,6 +301,9 @@ function Constructor:addNode(items, isRestricted)
     elseif item.type == 'constant' then
       -- name, value
       Constructor.addConstant(self, item.name, item.value)
+    elseif item.type == 'variable' then
+      -- name, value
+      Constructor.addVariable(self, item.name, item.value)
     elseif item.type == 'knot' then
       -- knot
       Constructor.addKnot(self, item.knot)
@@ -312,7 +316,7 @@ function Constructor:addNode(items, isRestricted)
     elseif item.type == 'sequence' then
       -- sequence, shuffle, alts
       Constructor.addSequence(self, item.sequence, item.shuffle, item.alts)
-    elseif item.type == 'variable' or item.type == 'assignment' then
+    elseif item.type == 'assignment' then
       -- level, name, value, temp
       Constructor.addAssignment(self, item.level, item.name, item.value, item.temp)
     elseif item.type == 'paragraph' then
@@ -344,6 +348,10 @@ function Constructor:addConstant(constant, value)
   self.book.constants[constant] = value
 end
 
+function Constructor:addVariable(variable, value)
+  self.variablesToCompute[variable] = value
+end
+
 function Constructor:addKnot(knot)
   self.currentKnot = knot
   self.currentStitch = '_'
@@ -354,13 +362,12 @@ function Constructor:addKnot(knot)
 end
 
 function Constructor:addStitch(stitch)
-  
   -- If a root stitch is empty we need to add a divert to the first stitch in the ink file.
   if self.currentStitch == '_' then
     local rootStitchNode = self.book.tree[self.currentKnot]._
     if #rootStitchNode == 0 then
       local divertItem = { divert = stitch }
-      table.insert(rootStitchNode, divertItem)  
+      table.insert(rootStitchNode, divertItem)
     end
   end
 
@@ -437,7 +444,7 @@ end
 function Constructor:addParagraph(level, label, parts, tags)
   local items = Constructor.convertParagraphPartsToItems(parts, true)
   items = items or { }
-  
+
   -- If the paragraph has a label or tags we need to place them as the first text item.
   if label ~= nil or tags ~= nil then
     local firstItem
@@ -464,7 +471,7 @@ function Constructor.convertParagraphPartsToItems(parts, isRoot)
   local isRoot = isRoot ~= nil and isRoot or false
   local items = { }
   local item
-  
+
   for index, part in ipairs(parts) do
 
     if part.condition then -- Inline condition part
@@ -479,13 +486,13 @@ function Constructor.convertParagraphPartsToItems(parts, isRoot)
       item = nil
 
     elseif part.sequence then -- Inline sequence part
-      
+
       item = {
         sequence = part.sequence.sequence,
         shuffle = part.sequence.shuffle and true or nil,
         alts = { }
       }
-      
+
       for _, alt in ipairs(part.sequence.alts) do
         table.insert(item.alts, Constructor.convertParagraphPartsToItems(alt))
       end
@@ -521,7 +528,7 @@ function Constructor.convertParagraphPartsToItems(parts, isRoot)
             item.text = item.text .. '<>'
           end
           table.insert(items, item)
-          item = nil  
+          item = nil
         end
       end
 
@@ -530,12 +537,12 @@ function Constructor.convertParagraphPartsToItems(parts, isRoot)
 
   if isRoot then
     -- Add a safe prefix and suffix for correct conditions gluing
-    
+
     local firstItem = items[1]
     if firstItem.text == nil and firstItem.divert == nil then
       table.insert(items, 1, { text = '' } )
     end
-    
+
     local lastItem = items[#items]
     if lastItem.text == nil and lastItem.divert == nil then
       table.insert(items, { text = '' } )
@@ -572,7 +579,7 @@ function Constructor:addChoice(level, sticky, label, condition, sentence, divert
     else
       text = text:gsub('^%s*(.-)%s*$', '%1')
     end
-    
+
     item.text = text
     item.choice = choice
   end
@@ -590,9 +597,49 @@ function Constructor:addItem(level, item)
   while #self.nodesChain > level do
     table.remove(self.nodesChain)
   end
-  
+
   local node = self.nodesChain[#self.nodesChain]
   table.insert(node, item)
+end
+
+function Constructor:computeVariable(variable, value)
+  local constant = self.book.constants[value]
+  if constant then
+    self.book.variables[variable] = constant
+    return
+  end
+
+  local listExpression = value:match('%(([%s%w%.,_]*)%)')
+  local itemExpressions = listExpression and lume.array(listExpression:gmatch('[%w_%.]+')) or { value }
+  local listVariable = listExpression and { } or nil
+
+  for _, itemExpression in ipairs(itemExpressions) do
+    local listPart, itemPart = itemExpression:match('([%w_]+)%.([%w_]+)')
+    itemPart = itemPart or itemExpression
+
+    for listName, listItems in pairs(self.book.lists) do
+      local listIsValid = listPart == nil or listPart == listName
+      local itemIsFound = lume.find(listItems, itemPart)
+
+      if listIsValid and itemIsFound then
+        listVariable = listVariable or { }
+        listVariable[listName] = listVariable[listName] or { }
+        listVariable[listName][itemPart] = true
+      end
+    end
+  end
+
+  if listVariable then
+    self.book.variables[variable] = listVariable
+  else
+    self.book.variables[variable] = lume.deserialize(value)
+  end
+end
+
+function Constructor:computeVariables()
+  for variable, value in pairs(self.variablesToCompute) do
+    Constructor.computeVariable(self, variable, value)
+  end
 end
 
 function Constructor.clear(tree)
@@ -605,12 +652,12 @@ end
 
 function Constructor.clearNode(node)
   for index, item in ipairs(node) do
-    
+
     -- Simplify text only items
     if item.text ~= nil and lume.count(item) == 1 then
       node[index] = item.text
     end
-    
+
     if item.node ~= nil then
       -- Clear choice nodes
       if #item.node == 0 then
@@ -618,7 +665,7 @@ function Constructor.clearNode(node)
       else
         Constructor.clearNode(item.node)
       end
-      
+
     end
 
     if item.success ~= nil then
@@ -643,7 +690,7 @@ function Constructor.clearNode(node)
         Constructor.clearNode(item.success)
         if #item.success == 1 and type(item.success[1]) == 'string' then
           item.success = item.success[1]
-        end   
+        end
       end
 
       -- Clear failure nodes
@@ -651,7 +698,7 @@ function Constructor.clearNode(node)
         Constructor.clearNode(item.failure)
         if #item.failure == 1 and type(item.failure[1]) == 'string' then
           item.failure = item.failure[1]
-        end     
+        end
       end
     end
 
