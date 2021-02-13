@@ -1,0 +1,57 @@
+ITEMGEN_BONES_RARE_NOUN_1
+Skeleton
+NMS_UPDATE3_ENGLISH.EXML
+
+Some sounds
+several Anomaly noises
+
+kzzkt = Yellow collor, sounds like it is spelled
+starship repaired, hermetic
+
+dentify myself you are not allone kzzkt
+
+Title
+Entry number #4925C 
+
+(Subtitle mission)
+Broken Technology present itself
+
+
+
+No fuel KZZT failed to reach station, no choice but to kzzkt        
+
+
+  open_tag = "<AUDIO>"
+  close_tag = "<>"
+    
+#Stuff that occurs in text
+%NAME% the name of the NPC youa re taking to 
+
+{'Communicator_Open',
+ 'CrystalAltar_Collect',
+ 'MUS_StoryMode_MusicCue_10_Lp',
+ 'MUS_StoryMode_MusicCue_10_Lp_Stop',
+ 'Portal_Jump_Story_End',
+ 'TXT_RadioNoise',
+ 'TXT_StaticNoise_Start',
+ 'UI_Destination_Reached',
+ 'UI_Nanites_Received',
+ 'UI_NoWhereToLand',
+ 'UI_Record_Uploaded',
+ 'UI_Standing_Increased',
+ 'WARRIORANGRY',
+ 'WPN_PL_MELEE',
+ 'WPN_PL_PISTOL',
+ 'WPN_PL_TAKEOUT'}
+ 
+
+# Really cool and unque sound we can use    
+
+    Text: DECODING<AUDIO>UI_Destination_Reached<>... 16 <AUDIO>UI_Nanites_Received<><IMG>SLASH<> 16 <AUDIO>UI_Nanites_Received<><IMG>SLASH<> 16 <AUDIO>UI_Nanites_Received<><IMG>SLASH<>
+ENTRY <STELLAR>#4925C<>: No fuel in <AUDIO>TXT_RadioNoise<><STELLAR>- kzzzkt -<> failed to reach station. Hazard protection low... no choice but to <AUDIO>TXT_RadioNoise<><STELLAR>- kzzzkt -<> underground... <AUDIO>TXT_RadioNoise<><STELLAR>- kzzzktzzkt -<> deployed <TECHNOLOGY>Base Computer<>...    
+    
+
+Ambient noise by the animal :
+    cow  looking thing
+    
+    

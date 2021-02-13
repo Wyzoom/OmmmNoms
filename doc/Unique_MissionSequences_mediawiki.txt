@@ -1,0 +1,65 @@
+{| class="wikitable" style="text-align: left;"
+|+ <!-- caption -->
+|-
+! Types of MissionSequence
+|-
+| GcMissionSequenceWaitForMessage.xml
+|-
+| GcMissionSequenceAudioEvent.xml
+|-
+| GcMissionSequenceStartScanEvent.xml
+|-
+| GcMissionSequenceFreighterEngage.xml
+|-
+| GcMissionSequenceWaitForStat.xml
+|-
+| GcGenericMissionSequence.xml
+|-
+| GcMissionSequenceCollectProduct.xml
+|-
+| GcMissionSequenceWaitForConditions.xml
+|-
+| GcMissionSequenceWaitForPhoto.xml
+|-
+| GcMissionSequenceReward.xml
+|-
+| GcMissionSequenceWaitForCompletionMessage.xml
+|-
+| GcMissionSequenceCollectSubstance.xml
+|-
+| GcMissionSequenceWait.xml
+|-
+| GcMissionSequenceConstruct.xml
+|-
+| GcMissionSequenceDiscover.xml
+|-
+| GcMissionSequenceShowMissionUpdateMessage.xml
+|-
+| GcMissionSequenceGroup.xml
+|-
+| GcMissionSequenceKill.xml
+|-
+| GcMissionSequenceGetToScanEvent.xml
+|-
+| GcMissionSequenceWaitForScanEvent.xml
+|-
+| GcMissionSequenceStop.xml
+|-
+| GcMissionSequenceFeed.xml
+|-
+| GcMissionSequenceWaitForDepots.xml
+|-
+| GcMissionSequenceEndScanEvent.xml
+|-
+| GcMissionSequenceBounty.xml
+|-
+| GcMissionSequenceWaitForFreighterPods.xml
+|-
+| GcMissionSequenceShowMessage.xml
+|-
+| GcMissionSequenceBroadcastMessage.xml
+|-
+| GcMissionSequenceWaitForShips.xml
+|-
+| GcMissionSequencePirates.xml
+|}

@@ -1,0 +1,721 @@
+{| class="wikitable" style="text-align: left;"
+|+ <!-- caption -->
+|-
+! Property name                          !! Unique values
+|-
+| MissionID                              || ['DELIVER_HARD', 'KILL_ROBOT_HARD', 'BOUNTY_EASY', 'PHOTO_CRE', 'HIDE_SEEK_TIMED', 'KILL_FIENDS', 'FREIGHTER_D', 'BONE_HUNT', 'DEPOT_RAID_HARD', 'KILL_ROBOT_MED', 'KILL_ROBOTS', 'REPAIR_2', 'DELIVER', 'FEED_CRE', 'BOUNTY_MED', 'DEPOT_RAID', 'KILL_CREATURES', 'COLLECT4', 'FACT_RAID_MED', 'HIDE_SEEK_BRIBE', 'SCAN_MIN', 'SCAN_TREE', 'SCAN_CRE', 'MISSING_PERSON', 'PHOTO_BUILD', 'COLLECT2', 'FREIGHTER_A', 'REPAIR_1', 'FACTORY_RAID', 'REPAIR_3', 'BOUNTY_HARD', 'COLLECT1', 'CONSTRUCTION', 'PHOTO_BIOME', 'FACT_RAID_HARD', 'KILL_PREDATORS', 'FARMER1', 'COLLECT3', 'DIGGING']
+|-
+| MissionClass                           || ['Secondary']
+|-
+| MissionIsCritical                      || ['False']
+|-
+| MissionObjective                       || ['MISSION_OBJ_CRE_SCAN', 'MISSION_OBJ_PHOTO_BIO', 'MISSION_OBJ_FIEND_HUNT', 'MISSION_OBJ_FACTORY', 'MISSION_OBJ_TREE_SCAN', 'MISSION_OBJ_BUILD', 'MISSION_OBJ_PHOTO_BLD', 'MISSION_OBJ_CRE_HUNT', 'MISSION_OBJ_SENTI', 'MISSION_OBJ_DIGGING', 'MISSION_OBJ_SENTI_HARD', 'MISSION_OBJ_HIDE_SEEK', 'MISSION_OBJ_MISSING', 'MISSION_OBJ_FREI_D', 'MISSION_OBJ_DEPOT', 'MISSION_OBJ_PHOTO_CRE', 'MISSION_OBJ_BNTY_HARD', 'MISSION_OBJ_REPAIR', 'MISSION_OBJ_COLLECT', 'MISSION_OBJ_PRED_HUNT', 'MISSION_OBJ_BNTY_EASY', 'MISSION_OBJ_CRE_FEED', 'MISSION_OBJ_DELIVERY', 'MISSION_OBJ_MIN_SCAN', 'MISSION_OBJ_FREI_A', 'MISSION_OBJ_BNTY_MED']
+|-
+| MissionTitles                          || ['GcNumberedTextList.xml']
+|-
+| Format                                 || ['', 'NPC_MISSION_FIEND_HUNT_HEAD_%d', 'NPC_MISSION_MISSING_PROC_C_%d', 'NPC_MISSION_DELIVERY_TITLE_%d', 'NPC_MISSION_PHOTO_BIO_SUB', 'NPC_MISSION_SENTI_%d', 'NPC_MISSION_CRE_HUNT_SUB', 'NPC_MISSION_BNTY_MED_%d', 'NPC_MISSION_REPAIR_TITLE_%d', 'NPC_MISSION_FREI_A_PROC_A_%d', 'NPC_MISSION_SENTI_TITLE_%d', 'NPC_MISSION_DIGGING_PROC_C_%d', 'NPC_MISSION_SENTI_HARD_%d', 'NPC_MISSION_FREI_A_HEAD_%d', 'NPC_MISSION_PHOTO_CRE_HEAD', 'NPC_MISSION_BUILD_PROC_A_%d', 'NPC_MISSION_REPAIR_PROC_B_%d', 'NPC_MISSION_SENTI_PROC_A_%d', 'NPC_MISSION_DELIVERY_%d', 'NPC_MISSION_CRE_SCAN_%d', 'NPC_MISSION_FACTORY_SUB', 'NPC_MISSION_PHOTO_CRE_SUB', 'NPC_MISSION_FREI_D_SUB', 'NPC_MISSION_MISSING_HEAD_%d', 'NPC_MISSION_BUILD_PROC_C_%d', 'NPC_MISSION_COLLECT_PROC_B_%d', 'NPC_MISSION_TREE_SCAN_PROC_B_%d', 'NPC_MISSION_CRE_SCAN_HEAD_%d', 'NPC_MISSION_PHOTO_PROC_A_%d', 'NPC_MISSION_CRE_FEED_PROC_C_%d', 'NPC_MISSION_DEPOT_TITLE_%d', 'NPC_MISSION_DELIVERY_PROC_C_%d', 'NPC_MISSION_FREI_D_HEAD_%d', 'NPC_MISSION_BNTY_MED_SUB', 'NPC_MISSION_SENTI_PROC_B_%d', 'NPC_MISSION_CRE_FEED_PROC_B_%d', 'NPC_MISSION_HIDE_SEEK_PROC_C_%d', 'NPC_MISSION_DEPOT_PROC_C_%d', 'NPC_MISSION_BNTY_MED_TITLE_%d', 'NPC_MISSION_MISSING_%d', 'NPC_MISSION_PHOTO_BLD_PROC_C_%d', 'NPC_MISSION_TREE_SCAN_HEAD_%d', 'NPC_MISSION_CRE_HUNT_HEAD_%d', 'NPC_MISSION_MIN_SCAN_TITLE_%d', 'NPC_MISSION_DELIVERY_PROC_B_%d', 'NPC_MISSION_PHOTO_BLD_PROC_B_%d', 'NPC_MISSION_DELIVERY_HEAD_%d', 'NPC_MISSION_FREI_A_SUB', 'NPC_MISSION_HIDE_SEEK_TITLE_%d', 'NPC_MISSION_BONES_HEAD_1', 'NPC_MISSION_MIN_SCAN_SUB', 'NPC_MISSION_SENTI_PROC_C_%d', 'NPC_MISSION_REPAIR_HEAD_%d', 'NPC_MISSION_TREE_SCAN_SUB', 'NPC_MISSION_COLLECT_TITLE_%d', 'NPC_MISSION_PHOTO_CRE_PROC_C_%d', 'NPC_MISSION_BONES_SUB', 'NPC_MISSION_TREE_SCAN_PROC_C_%d', 'NPC_MISSION_BUILD_PROC_B_%d', 'NPC_MISSION_COLLECT_HEAD_%d', 'NPC_MISSION_PHOTO_BLD_SUB', 'NPC_MISSION_DIGGING_PROC_A_%d', 'NPC_MISSION_BUILD_HEAD_1', 'NPC_MISSION_BNTY_HARD_%d', 'NPC_MISSION_TREE_SCAN_%d', 'NPC_MISSION_HIDE_SEEK_%d', 'NPC_MISSION_MIN_SCAN_PROC_C_%d', 'NPC_MISSION_DEPOT_HEAD_%d', 'NPC_MISSION_DEPOT_PROC_B_%d', 'NPC_MISSION_PRED_HUNT_PROC_B_%d', 'NPC_MISSION_DIGGING_HEAD_1', 'NPC_MISSION_FACTORY_PROC_C_%d', 'NPC_MISSION_MIN_SCAN_PROC_A_%d', 'NPC_MISSION_MISSING_SUB', 'NPC_MISSION_FREI_D_PROC_A_%d', 'NPC_MISSION_BNTY_MED_HEAD_%d', 'NPC_MISSION_PRED_HUNT_TITLE_%d', 'NPC_MISSION_FACTORY_PROC_B_%d', 'NPC_MISSION_CRE_HUNT_TITLE_%d', 'NPC_MISSION_PRED_HUNT_PROC_C_%d', 'NPC_MISSION_PRED_HUNT_SUB', 'NPC_MISSION_PHOTO_BIO_HEAD', 'NPC_MISSION_BONES_PROC_B_%d', 'NPC_MISSION_FREI_A_PROC_B_%d', 'NPC_MISSION_CRE_HUNT_%d', 'NPC_MISSION_CRE_HUNT_PROC_B_%d', 'NPC_MISSION_REPAIR_PROC_C_%d', 'NPC_MISSION_CRE_FEED_PROC_A_%d', 'NPC_MISSION_FIEND_HUNT_SUB', 'NPC_MISSION_MISSING_TITLE_%d', 'NPC_MISSION_HIDE_SEEK_SUB', 'NPC_MISSION_FREI_D_PROC_C_%d', 'NPC_MISSION_PHOTO_LOC_PROC_B_%d', 'NPC_MISSION_FREI_A_PROC_C_%d', 'NPC_MISSION_DEPOT_PROC_A_%d', 'NPC_MISSION_DELIVERY_PROC_A_%d', 'NPC_MISSION_BUILD_SUB', 'NPC_MISSION_SENTI_HARD_HEAD_%d', 'NPC_MISSION_REPAIR_%d', 'NPC_MISSION_COLLECT_SUB', 'NPC_MISSION_BNTY_PROC_B_%d', 'NPC_MISSION_CRE_FEED_SUB', 'NPC_MISSION_PRED_HUNT_PROC_A_%d', 'NPC_MISSION_MISSING_PROC_B_%d', 'NPC_MISSION_BNTY_EASY_%d', 'NPC_MISSION_MIN_SCAN_%d', 'NPC_MISSION_MIN_SCAN_PROC_B_%d', 'NPC_MISSION_HIDE_SEEK_PROC_B_%d', 'NPC_MISSION_HIDE_SEEK_PROC_A_%d', 'NPC_MISSION_TREE_SCAN_PROC_A_%d', 'NPC_MISSION_PHOTO_CRE_PROC_B_%d', 'NPC_MISSION_FACTORY_HEAD_%d', 'NPC_MISSION_COLLECT_%d', 'NPC_MISSION_BONES_PROC_C_%d', 'NPC_MISSION_BNTY_PROC_A_%d', 'NPC_MISSION_BNTY_HARD_HEAD_%d', 'NPC_MISSION_FREI_D_TITLE_%d', 'NPC_MISSION_DIGGING_PROC_B_%d', 'NPC_MISSION_DEPOT_SUB', 'NPC_MISSION_REPAIR_PROC_A_%d', 'NPC_MISSION_HIDE_SEEK_HEAD_%d', 'NPC_MISSION_SENTI_HARD_SUB', 'NPC_MISSION_BNTY_HARD_TITLE_%d', 'NPC_MISSION_PRED_HUNT_HEAD_%d', 'NPC_MISSION_CRE_SCAN_PROC_A_%d', 'NPC_MISSION_PRED_HUNT_%d', 'NPC_MISSION_CRE_SCAN_SUB', 'NPC_MISSION_FACTORY_%d', 'NPC_MISSION_PHOTO_BLD_HEAD', 'NPC_MISSION_BONES_PROC_A_%d', 'NPC_MISSION_BNTY_EASY_HEAD_%d', 'NPC_MISSION_FACTORY_TITLE_%d', 'NPC_MISSION_BNTY_EASY_SUB', 'NPC_MISSION_COLLECT_PROC_C_%d', 'NPC_MISSION_FREI_A_TITLE_%d', 'NPC_MISSION_SENTI_SUB', 'NPC_MISSION_FREI_D_%d', 'NPC_MISSION_DEPOT_%d', 'NPC_MISSION_BNTY_HARD_SUB', 'NPC_MISSION_FREI_D_PROC_B_%d', 'NPC_MISSION_BNTY_PROC_C_%d', 'NPC_MISSION_SENTI_HARD_TITLE_%d', 'NPC_MISSION_MISSING_PROC_A_%d', 'NPC_MISSION_DELIVERY_SUB', 'NPC_MISSION_CRE_HUNT_PROC_C_%d', 'NPC_MISSION_FREI_A_%d', 'NPC_MISSION_CRE_HUNT_PROC_A_%d', 'NPC_MISSION_FACTORY_PROC_A_%d', 'NPC_MISSION_COLLECT_PROC_A_%d', 'NPC_MISSION_CRE_SCAN_TITLE_%d', 'NPC_MISSION_CRE_SCAN_PROC_B_%d', 'NPC_MISSION_PHOTO_LOC_PROC_C_%d', 'NPC_MISSION_DIGGING_SUB', 'NPC_MISSION_CRE_SCAN_PROC_C_%d', 'NPC_MISSION_BNTY_EASY_TITLE_%d', 'NPC_MISSION_MIN_SCAN_HEAD_%d', 'NPC_MISSION_SENTI_HEAD_%d', 'NPC_MISSION_TREE_SCAN_TITLE_%d', 'NPC_MISSION_REPAIR_SUB']
+|-
+| Count                                  || ['0', '25', '5', '10', '15', '20', '8', '6', '9', '1', '17', '12']
+|-
+| MissionSubtitles                       || ['GcNumberedTextList.xml']
+|-
+| MissionDescriptions                    || ['GcNumberedTextList.xml']
+|-
+| MissionProcDescriptionHeader           || ['GcNumberedTextList.xml']
+|-
+| MissionProcDescriptionA                || ['GcNumberedTextList.xml']
+|-
+| MissionProcDescriptionB                || ['GcNumberedTextList.xml']
+|-
+| MissionProcDescriptionC                || ['GcNumberedTextList.xml']
+|-
+| MissionIcon                            || ['TkTextureResource.xml']
+|-
+| Filename                               || ['', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYHARD.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MINSCAN.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYMEDIUM.MSHOP.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.FLORA.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MISSINGPERSON.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.HIDE_N_SEEK.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PHOTO.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DELIVER.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MISSINGPERSON.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CRESCAN.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FIEND.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PHOTO.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BONES.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CREATUREHUNT.ON.DDS', 'TEXTURES/UI/HUD/ICONS/SCANNING/PICKUP.CRATE.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_AT.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYHARD.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.TREESCAN.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CREATUREHUNT.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CREATUREHUNT.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MINSCAN.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_DF.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CONSTRUCTION.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FIEND.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.COLLECT.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DELIVER.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_DF.ON.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.PHOTO.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.MISSINGPERSON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.TREESCAN.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.HIDE_N_SEEK.OFF.DDS', 'TEXTURES/UI/HUD/ICONS/SCANNING/PICKUP.RELIC.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DEPOTRAID.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_DF.MSHOP.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.CONSTRUCTION.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYEASY.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BONES.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FACTORYRAID.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DEPOTRAID.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CONSTRUCTION.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.REPAIR.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DELIVER.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FACTORYRAID.OFF.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.COLLECT.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PHOTO.OFF.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.FIEND.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_AT.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FACTORYRAID.ON.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/COLLECT.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSINGPERSON.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.DELIVER.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.CREATURE.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MISSINGPERSON.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.COLLECT.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYEASY.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYEASY.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.HIDE_N_SEEK.MSHOP.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.REPAIR.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.BOUNTY.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.DEPOTRAID.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.MINSCAN.OFF.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.SENTINEL.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHT_AT.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CONSTRUCTION.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ROBOTKILL.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYMEDIUM.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ROBOTKILL.OFF.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.BONES.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.SCAN.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.REPAIR.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYMEDIUM.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CRESCAN.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.TREESCAN.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.REPAIR.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FIEND.OFF.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ROBOTKILL.ON.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.DEPOTRAID.DDS', 'TEXTURES/UI/HUD/ICONS/MISSIONS/MISSION.FREIGHTER.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.COLLECT.ON.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BONES.MSHOP.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.BOUNTYHARD.MSHOP.DDS', 'TEXTURES/UI/HUD/ICONS/SCANNING/PICKUP.BURIEDRARE.DDS', 'TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.CRESCAN.MSHOP.DDS']
+|-
+| MissionIconSelected                    || ['TkTextureResource.xml']
+|-
+| MissionIconNotSelected                 || ['TkTextureResource.xml']
+|-
+| MissionPriority                        || ['0']
+|-
+| MissionCategory                        || ['GcMissionCategory.xml', 'Urgent', 'Mission']
+|-
+| MissionPageHint                        || ['GcMissionPageHint.xml', 'None']
+|-
+| MissionPageLocID                       || ['']
+|-
+| MissionBuildMenuHint                   || ['']
+|-
+| MissionHasColourOverride               || ['False']
+|-
+| MissionColourOverride                  || ['Colour.xml']
+|-
+| R                                      || ['1', '0.086', '0.947']
+|-
+| G                                      || ['1', '0.17', '0.68', '0.141']
+|-
+| B                                      || ['1', '0.356', '0.141']
+|-
+| A                                      || ['0.8', '1', '0.5']
+|-
+| DefaultItems                           || ['GcDefaultMissionItemsTable.xml']
+|-
+| PrefixTitle                            || ['True', 'False']
+|-
+| NextMissionHint                        || ['']
+|-
+| MessageComplete                        || ['Never', 'Default']
+|-
+| MessageStart                           || ['Never', 'Default']
+|-
+| MissionBoardOptions                    || ['GcMissionBoardOptions.xml']
+|-
+| Type                                   || ['GcMissionType.xml', 'GcBuildingPartSearchType.xml', 'GcInteractionType.xml', 'GcRealityCommonFactions.xml', 'GcBiomeType.xml']
+|-
+| MissionType                            || ['Cargo', 'Feeding', 'SpaceCombat', 'Piracy', 'GroundCombat', 'Research', 'Photo', 'Construction', 'Repair', 'MissingPerson']
+|-
+| Difficulty                             || ['GcMissionDifficulty.xml']
+|-
+| MissionDifficulty                      || ['Hard', 'Easy', 'Normal']
+|-
+| MinRank                                || ['0', '3', '5', '8', '6', '7', '4', '1']
+|-
+| CloseMissionGiver                      || ['False']
+|-
+| IsGuildShopMission                     || ['False']
+|-
+| IsPlanetProcMission                    || ['False']
+|-
+| IsMultiplayerEventMission              || ['False']
+|-
+| RewardPenaltyOnAbandon                 || ['', 'MB_STAND_NEG']
+|-
+| MissionFaction                         || ['WarriorGuild', 'Vykeen', 'Gek', 'ExplorerGuild', 'TradeGuild', 'Korvax']
+|-
+| Weighting                              || ['0', '100', '30', '50', '10', '75', '60', '40']
+|-
+| IgnoreCalculatedObjective              || ['True', 'False']
+|-
+| MultiplayerMissionInitialWarpScanEvent || ['']
+|-
+| DefaultItemTypeForInitialWarp          || ['None']
+|-
+| AutoStart                              || ['None']
+|-
+| RestartOnCompletion                    || ['False']
+|-
+| CancelSetsComplete                     || ['False']
+|-
+| Name                                   || ['SE_DELIVER_LOCAL', 'SE_PHOTO_BIOME_LAVA', 'SE_PHOTO_BIOME_WEIRD', 'NPC_DIGGING_OPT', 'SE_MISSION_GRAB_REPAIR2', 'SE_HAND_IN_TREE_SCAN', 'SE_HAND_IN_PRED_HUNT', 'SE_BONE_TERMINAL', 'SE_HIDE_SEEK_FIND', 'SE_DIG_CLUE_MAIN', 'SE_HIDE_SEEK_TIMED', 'SE_FIND_BONES', 'SE_PHOTO_BIOME_SWAMP', 'SE_DEP_RAID_TARGET_GRAB2', 'SE_FACT_RAID_TARGET_GRAB2', 'SE_HAND_IN_FACT_RAID', 'SE_HAND_IN_BOUNTY3', 'SE_HAND_IN_KILL_ROBOT_MED', 'SE_FACT_RAID_TARGET_TIMED2', 'SE_HAND_IN_COLLECT4', 'SE_HAND_IN_DEP_RAID', 'SE_COLLECT_DELIVERY1', 'SE_DIG_CLUE', 'SE_HAND_IN_COLLECT1', 'SE_HAND_IN_FREI_D', 'SE_HAND_IN_MISSING_PERSON', 'SE_DELIVERY_NOITEM', 'SE_HAND_IN_BOUNTY2', 'SE_PHOTO_BIOME_RADIO', 'SE_GRAB_HIDE_BRIBE', 'SE_MISSION_GRAB_REPAIR3', 'MISSION_DELIVER_OPT_B', 'SE_MISSION_GRAB_REPAIR1', 'SE_HAND_IN_COLLECT3', 'SE_HAND_IN_KILL_ROBOT_HARD', 'SE_PHOTO_BIOME_DUST', 'SE_HAND_IN_PHOTO1', 'SE_HAND_IN_BOUNTY1', 'SE_COLLECT_DELIVERY4', 'SE_PHOTO_BIOME_TOX', 'SE_DELIVER_HANDIN2', 'SE_HAND_IN_REPAIR3', 'SE_DELIVERY_NOITEM2', 'SE_HAND_IN_CREFEED', 'SE_CONSTRUCTION_TARGET', 'SE_DELIVER_MB2', 'SE_DELIVER_MB', 'SE_HAND_IN_CRE_SCAN', 'SE_HAND_IN_REPAIR1', 'SE_HAND_IN_HIDE_SEEK2', 'SE_FACT_RAID_TARGET_GRAB3', 'SE_FIEND_KILL_HAND_IN', 'SE_FIND_FIEND', 'SE_COLLECT_DELIVERY3', 'SE_PHOTO_BIOME_COLD', 'SE_PHOTO_BIOME_LUSH', 'SE_DELIVER_HANDIN', 'SE_HAND_IN_PHOTO3', 'SE_DIG_TERMINAL', 'SE_HAND_IN_KILL_ROBOTS', 'SE_HAND_IN_DEP_RAID2', 'SE_HAND_IN_DIGGING', 'SE_HAND_IN_CRE_HUNT', 'SE_HAND_IN_FACT_RAID2', 'SE_HAND_IN_FACT_RAID3', 'SE_DELIVER_LOCAL2', 'SE_GRAB_HIDE_SEEK2', 'SE_FACT_RAID_TARGET_TIMED', 'SE_PHOTO_BIOME_HOT', 'SE_HAND_IN_REPAIR2', 'SE_COLLECT_DELIVERY2', 'SE_HAND_IN_FREI_A', 'SE_HAND_IN_HIDE_SEEK1', 'SE_HAND_IN_COLLECT2', 'SE_CONSTRUCTION_HAND_IN', 'SE_HAND_IN_BONES', 'SE_HAND_IN_MIN_SCAN', 'SE_FACT_RAID_TARGET_GRAB', 'SE_DEP_RAID_TARGET_GRAB', 'SE_GRAB_MISSING_PERSON', 'SE_HAND_IN_PHOTO2', 'SE_PHOTO_BIOME_DEAD', 'MISSION_DELIVER_OPT_A']
+|-
+| ForceInteraction                       || ['', '?MISSION_DIG_CLUE', '?MISSION_FACT_RAID_MED', 'DELIVERY_NOITEM1', '?MISSION_MISSING_PERSON', '?MISSION_SALVAGE', 'DELIVERY_SHOP', '?MISSION_FACTORY_RAID', 'DELIVERY_NOITEM2', 'COLLECT_DELIVERY_STEP2', 'DELIVERY_SHOP2', 'COLLECT_DELIVERY_STEP4', '?MISSION_HIDE_SEEK', 'COLLECT_DELIVERY_STEP1', '?MISSION_HIDE_FREE_INFO', 'D_DIG_TERMINAL', '?MISSION_DIG_CLUE_MAIN', 'COLLECT_DELIVERY_STEP3', 'D_BONE_TERMINAL', '?MISSION_HIDE_INFO']
+|-
+| ForceInteractionType                   || ['GcInteractionType.xml']
+|-
+| InteractionType                        || ['NPC_CrashSite', 'MissionGiver', 'Harvester', 'Shop', 'RadioTower', 'AbandonedBuildings', 'DistressBeacon', 'None', 'Observatory', 'Plaque', 'NPC']
+|-
+| ForceBroken                            || ['True', 'False']
+|-
+| ForceFixed                             || ['False']
+|-
+| ForceOverridesAll                      || ['True']
+|-
+| IsCommunityPortalOverride              || ['False']
+|-
+| ClearForcedInteractionOnCompletion     || ['False']
+|-
+| BuildingPreventionRadius               || ['0']
+|-
+| AlwaysShow                             || ['False']
+|-
+| NeverShow                              || ['True', 'False']
+|-
+| PlanetLabelText                        || ['', 'UI_BUILD_PLANET_LABEL']
+|-
+| SurveyDistance                         || ['1000']
+|-
+| SurveyDiscoveryOSDMessage              || ['UI_MISSIONMARKER_DISC_OSD']
+|-
+| EventStartType                         || ['Special']
+|-
+| EventEndType                           || ['Interact']
+|-
+| EventPriority                          || ['Regular']
+|-
+| CanEndFromOutsideMission               || ['False']
+|-
+| DisableMultiplayerSync                 || ['False']
+|-
+| ReplaceEventIfAlreadyActive            || ['False']
+|-
+| BuildingLocation                       || ['Nearest', 'AllNearest', 'Random', 'PlanetSearch']
+|-
+| BuildingType                           || ['SpaceStation', 'BuildingClass', 'Any', 'GcPhotoBuilding.xml']
+|-
+| BuildingClass                          || ['NPCDistressSignal', 'Depot', 'Abandoned', 'Shop', 'Harvester', 'RadioTower', 'Shelter', 'None', 'DistressSignal', 'Observatory', 'Outpost', 'Plaque', 'GcBuildingClassification.xml']
+|-
+| AllowFriendBases                       || ['False']
+|-
+| ForceWideRandom                        || ['False']
+|-
+| MustFindSystem                         || ['False']
+|-
+| AllowOverriddenBuildings               || ['True']
+|-
+| SolarSystemLocation                    || ['Near', 'LocalOrNear']
+|-
+| SolarSystemAttributes                  || ['GcScanEventSolarSystemLookup.xml']
+|-
+| UseStarType                            || ['False']
+|-
+| UseWealth                              || ['False']
+|-
+| Usetrading                             || ['False']
+|-
+| Userace                                || ['GcAlienRace.xml']
+|-
+| AlienRace                              || ['None']
+|-
+| UseAnomaly                             || ['GcGalaxyStarAnomaly.xml']
+|-
+| GalaxyStarAnomaly                      || ['None']
+|-
+| UseConflict                            || ['GcPlayerConflictData.xml']
+|-
+| ConflictLevel                          || ['Default']
+|-
+| StarType                               || ['GcGalaxyStarTypes.xml']
+|-
+| GalaxyStarType                         || ['Yellow']
+|-
+| TradingData                            || ['GcPlanetTradingData.xml']
+|-
+| WealthClass                            || ['Average', 'GcWealthClass.xml']
+|-
+| TradingClass                           || ['GcTradingClass.xml', 'Mining']
+|-
+| AllowUnsafeMatches                     || ['False']
+|-
+| NeverAllowEmpty                        || ['False']
+|-
+| NeverAllowAbandoned                    || ['False']
+|-
+| NeedsWaterPlanet                       || ['False']
+|-
+| NeedsExtremeSentinelPlanet             || ['False']
+|-
+| NeverAllowExtremeSentinelPlanet        || ['False']
+|-
+| NeedsExtremeWeatherPlanet              || ['False']
+|-
+| NeedsExtremeHazardPlanet               || ['False']
+|-
+| AnyBiomeNotWeirdOrDead                 || ['False']
+|-
+| AnyRGBBiome                            || ['False']
+|-
+| NeedsBiome                             || ['True', 'False']
+|-
+| NeedsBiomeType                         || ['GcBiomeType.xml']
+|-
+| Biome                                  || ['Weird', 'Scorched', 'Frozen', 'Swamp', 'Lava', 'Radioactive', 'Toxic', 'Lush', 'Barren', 'Dead', 'GcBiomeType.xml']
+|-
+| UseBiomeSubType                        || ['GcBiomeSubType.xml']
+|-
+| BiomeSubType                           || ['None']
+|-
+| NeedsEmptySystem                       || ['False']
+|-
+| NeedsAbandonedSystem                   || ['False']
+|-
+| NeedsResourceHint                      || ['', 'UI_BONES_HINT']
+|-
+| NeedsHighCreatureLevel                 || ['False']
+|-
+| SamePlanetAsEvent                      || ['']
+|-
+| SolarSystemAttributesFallback          || ['GcScanEventSolarSystemLookup.xml']
+|-
+| ForceRestartInteraction                || ['True']
+|-
+| HasReward                              || ['']
+|-
+| NextOption                             || ['']
+|-
+| TriggerActions                         || ['GcScanEventTriggers.xml']
+|-
+| Range                                  || ['100']
+|-
+| AllowRetrigger                         || ['False']
+|-
+| TechShopType                           || ['GcTechnologyCategory.xml']
+|-
+| TechnologyCategory                     || ['All']
+|-
+| OSDMessage                             || ['', 'UI_MP_MISSION_PLANET_ARRIVE_OSD', 'UI_FACTORY_TIMED_OSD2', 'UI_PHOTO_BIO_GUIDED_PLANET_OSD', 'UI_FACTORY_OBJ1_OSD', 'UI_DELIVERY_OBJ1_OSD', 'UI_BUILD_EVENT_OSD', 'UI_FACTORY_TIMED_OSD1', 'UI_FACTORY_FAILURE_OSD', 'UI_FREI_A_OBJ1_OSD', 'UI_MISSING_OBJ1_OSD', 'UI_REPAIR_OBJ1_OSD', 'UI_DEPOT_OBJ1_OSD', 'UI_RETURN_MISSION_OBJ1_OSD', 'UI_FREI_D_OBJ1_OSD', 'UI_FIEND_KILL_OSD', 'UI_FREI_D_FAIL_OSD', 'UI_HIDE_SEEK_OBJ1_OSD']
+|-
+| InterstellarOSDMessage                 || ['SCANEVENT_ANOTHER_SYSTEM']
+|-
+| MarkerLabel                            || ['', 'UI_DIGGING_MARKER1', 'UI_PHOTO_BIO_GUIDED_PLANET_LAB', 'UI_FIEND_KILL_MARKER', 'UI_DELIVERY_OBJ1_MARKER', 'UI_BUILD_EVENT_LABEL', 'UI_RETURN_MISSION_OBJ1_MARKER', 'UI_REPAIR_OBJ1_MARKER', 'UI_DEPOT_OBJ1_MARKER', 'NPC_DIGGING_TITLE', 'UI_BONES_MARKER', 'UI_MISSING_OBJ1_MARKER', 'UI_HIDE_SEEK_OBJ1_MARKER', 'UI_FACTORY_OBJ1_MARKER']
+|-
+| MarkerIcon                             || ['TkTextureResource.xml']
+|-
+| StartTime                              || ['0']
+|-
+| MessageTime                            || ['0']
+|-
+| MessageDisplayTime                     || ['4']
+|-
+| MessageAudio                           || ['GcAudioWwiseEvents.xml']
+|-
+| AkEvent                                || ['VO_TUT_COORDSRECEIVED', 'VO_SECURE_TRANSMISSIONMODULE_LOCATED', 'UI_PIRATES_WARNING_STOP', 'WARN_HOSTILE_DETECTED', 'INVALID_EVENT', 'UI_PIRATES_WARNING', 'PLAYER_DIE', 'UI_NEW_DISCOVERY']
+|-
+| IconTime                               || ['4']
+|-
+| TooltipTime                            || ['10']
+|-
+| TooltipRepeats                         || ['False']
+|-
+| ShowEndTooltip                         || ['True']
+|-
+| TooltipMessage                         || ['']
+|-
+| ResourceOverride                       || ['GcResourceElement.xml']
+|-
+| Seed                                   || ['0', 'GcSeed.xml']
+|-
+| UseSeedValue                           || ['False']
+|-
+| AltId                                  || ['']
+|-
+| ProceduralTexture                      || ['TkProceduralTextureChosenOptionList.xml']
+|-
+| StartConditionTest                     || ['GcMissionConditionTest.xml']
+|-
+| ConditionTest                          || ['AllTrue', 'AnyFalse', 'AnyTrue', 'GcMissionConditionTest.xml', 'AllFalse']
+|-
+| CancelConditionTest                    || ['GcMissionConditionTest.xml']
+|-
+| StartIsCancel                          || ['False']
+|-
+| Version                                || ['3', '11', '5', '10', '8', '13', '6', '4', '7', '9', '1', '12']
+|-
+| Progress                               || ['11', '25', '27', '30', '19', '46', '12', '37', '28', '4', '31', '33', '3', '0', '50', '49', '5', '15', '8', '13', '36', '23', '24', '45', '21', '26', '38', '14', '10', '47', '44', '35', '52', '29', '48', '9', '42', '17', '22', '18', '34', '2', '20', '51', '6', '7', '53', '41', '32', '1', '39', '43', '16', '40']
+|-
+| Stage                                  || ['GcMissionSequenceWaitForMessage.xml', 'GcMissionSequenceAudioEvent.xml', 'GcMissionSequenceStartScanEvent.xml', 'GcMissionSequenceWaitForStat.xml', 'GcMissionSequenceFreighterEngage.xml', 'GcMissionSequenceCollectProduct.xml', 'GcMissionSequenceWaitForConditions.xml', 'GcMissionSequenceWaitForPhoto.xml', 'GcMissionSequenceWaitForCompletionMessage.xml', 'GcMissionSequenceReward.xml', 'GcMissionSequenceCollectSubstance.xml', 'GcMissionSequenceWait.xml', 'GcMissionSequenceConstruct.xml', 'GcMissionSequenceDiscover.xml', 'GcMissionSequenceShowMissionUpdateMessage.xml', 'GcMissionSequenceGroup.xml', 'GcMissionSequenceKill.xml', 'GcMissionSequenceGetToScanEvent.xml', 'GcMissionSequenceWaitForScanEvent.xml', 'GcMissionSequenceStop.xml', 'GcMissionSequenceFeed.xml', 'GcMissionSequenceWaitForDepots.xml', 'GcMissionSequenceEndScanEvent.xml', 'GcMissionSequenceBounty.xml', 'GcMissionSequenceWaitForFreighterPods.xml', 'GcMissionSequenceShowMessage.xml', 'GcMissionSequenceBroadcastMessage.xml', 'GcMissionSequenceWaitForShips.xml', 'GcMissionSequencePirates.xml']
+|-
+| Silent                                 || ['True', 'False']
+|-
+| Icon                                   || ['TkTextureResource.xml']
+|-
+| PageHint                               || ['GcMissionPageHint.xml']
+|-
+| PageDataLocID                          || ['']
+|-
+| BuildMenuHint                          || ['', 'BASE_FLAG']
+|-
+| InventoryHint                          || ['']
+|-
+| TargetMissionSurveyId                  || ['']
+|-
+| DebugText                              || ['', 'wait for it', 'find planet', 'spawn pirates', 'Giving you the item to deliver', 'clean up event', 'wait for message', 'mark and reach a planet - radioactive', 'start scan event', 'wait for succeed message', 'wrapper for build the right parts (should you have to upload it?)', 'wait for delivery', 'give standing', 'Take photo', 'mark mission giver for hand in', 'Do the bounty!', 'mark and reach a planet - weird', 'wait for on correct biome', 'wait for the event to succeed', 'reward', 'Set wanted level', 'cancel the mission', 'Waiting for factory raid to complete', 'Waiting for you to hand in', 'timed group!', 'wait to be near before we listen for a message, to stop accidental triggers', 'Wait for it...', 'update message', 'clean up the old event', 'wrapper for getting to system', 'grabbing mission giver for hand in', 'wait for in target system', 'mission update message', 'end event', 'mark and reach a planet - barren', 'mark and reach a planet - scorched', 'wrapper for main mission', 'get the mordite for the clue', 'mark and reach a planet - toxic', 'mark and reach a planet - swamp', 'wait a mo', 'wrapper for delivery', 'Grabbing missing person', 'Go claim your reward', 'signal target site', 'wait for bone collected message for the right rarity', 'Taking a photo of a Building!', 'wait to get to target site', 'clean up warning audio in case', 'start transmit event', 'wait for on target planet', 'Do some scanning!', 'get to main site', 'wrapper for scanner', 'mission update', 'wait for landed', 'wait for clue done', 'drop out if you attack the freighter!', 'wait for group conditions met (have base on current planet)', 'give standing for whoever gave you the mission', 'end countdown warning audio', 'wrapper for the fighting half', 'wait for near factory raid', 'wrapper for find planet', 'update messagwe', 'Hunt sentinels', 'wait for near event', 'find the freighter', 'get to bone planet', 'clear up hand in marker', 'wait for destroy freighter pods', 'get to the freighter', 'give main reward', 'show update message', 'show OSD message', 'wait for the item to be delivered', 'Grabbing a DEPOT to raid', 'wait for reach real target', 'main digging', 'update objective message', 'collect bones', 'get back on the planet', 'giving you a def chit', 'wait for transmit message', 'collect the item', 'start message', 'construct walls', 'get to event (or carry on if on correct biome)', 'Clean up', 'show osd', 'decorate', 'Kill wrapper', 'get near the depot', 'Go find them', 'give success message', 'show defence active message (and timer)', 'wrapper for hand in', 'clean up bones event', 'wait for hand in', 'mark and reach a planet - frozen', 'mark and reach a planet - lush', 'clean up bones finding event', 'wrapper for not having an econ scanner', 'Go find something to fix', 'clean up old event just in case', 'fail mission', 'gather the item', 'wait for repair message', 'wrapper for main objective', 'Taking a photo of a creature!', 'hand in', 'start hand in event', 'main reward', 'wait for treasure found', 'clean up SE', 'roll for pirates!', 'wait to make sure we exit if we can', 'wrapper for build a base', 'start the timed event!', 'grab mission guy for hand in', 'Grabbing HIDE_SEEK person', 'clean up other event just in case', 'timed group', 'mark planet', 'point to hand in', 'return wrapper', 'if has the item', 'transmit data', 'send mission message', 'show message', 'set wanted', 'wait for dig site located', 'Give reward', 'get to runaway', 'build a door', 'wait for pirates killed', 'find the real target', 'get to event or engage sentinels', 'wait for event local', 'mark and reach a planet - dead', 'mark clue', 'wait to see if we dropped out', 'mission udpate message', 'Grabbing a factory to raid', 'Kill some creatures', 'loop until handed in', 'wrapper for building the base', 'update messsage', 'wait for in same system as warp', 'icon override', 'wait for it...', 'locate digsite', 'show nearly out of time warning', 'give def chit', 'show failure message', 'reward standing', 'if lost the item', 'show fiend detected message', 'wait for bones planet found', 'wait for scan event', 'fiend killing is high priority', 'wrapper for kill', 'mark a planet', 'do the mission unless you leave', 'wait for base flag built', 'start mission notify', 'start terminal interaction', 'give reward', 'small wait', "wait until you're near", 'cancel scan event', 'wait until near ', 'ending message', 'wait for uploaded', 'wait', 'Giving reward', 'wait for upload scan', 'start timed event', 'signal delivery spot', 'Wait for hand in', 'blow up the depot!', 'clean up event just in case', "didn't time out, we win", 'OSD', 'Waiting for hand in', 'signal delivery box', 'check in space', 'wait to let it all bubble through', "wrapper for if you don't have a farm", 'Go to the place to deliver it', 'wrapper for return', 'collect keys', 'feed creatures', 'ten seconds left!', 'point you back at the clue site', 'mark and reach a planet - lava', 'Kill a quad', 'signal a mission giver', 'end scan event', 'start find bones', 'wait for dig clue']
+|-
+| ObjectiveID                            || ['', 'UI_DIGGING_OBJ1', 'UI_BUILD_OBJ3', 'UI_FIEND_KILL_OBJ', 'UI_PHOTO_BIO_GUIDED_OBJ', 'UI_BUILD_OBJ1', 'UI_PHOTO_CRE_OBJ', 'UI_DEPOT_OBJ', 'UI_BNTY_MED_OBJ', 'UI_BUILD_OBJ2', 'UI_SCAN_TREE_OBJ', 'UI_BNTY_EASY_OBJ', 'UI_BONES_OBJ3', 'UI_BONES_OBJ2', 'UI_CRE_FEED_OBJ', 'UI_CRE_KILL_OBJ_ALT', 'UI_SCAN_MIN_OBJ', 'UI_DIGGING_OBJ2', 'UI_MISSING_OBJ', 'UI_PHOTO_BLD_OBJ', 'UI_SENTI_OBJ', 'UI_DIGGING_OBJ3', 'UI_REPAIR_OBJ', 'UI_BNTY_HARD_OBJ', 'UI_PRED_KILL_OBJ', 'UI_DELIVERY_OBJ', 'UI_BONES_OBJ1', 'UI_RETURN_MISSION_OBJ', 'UI_COLLECT_OBJ', 'UI_SCAN_CRE_OBJ', 'UI_FACTORY_OBJ', 'UI_FREI_A_OBJ', 'UI_SENTI_HARD_OBJ', 'UI_HIDE_SEEK_OBJ', 'UI_FREI_D_OBJ', 'UI_PHOTO_BIO_GUIDED_OBJ2']
+|-
+| ObjectiveTipID                         || ['', 'UI_PHOTO_BLD_OBJ_TIP', 'UI_PHOTO_BIO_GUIDED_OBJ2_TIP', 'UI_DIGGING_OBJ3_TIP', 'UI_SENTI_HARD_OBJ_TIP', 'UI_DIGGING_OBJ1_TIP', 'UI_CRE_KILL_OBJ_TIP', 'UI_FACTORY_OBJ_TIP', 'UI_BUILD_OBJ1_TIP', 'UI_BONES_OBJ2_TIP', 'UI_CRE_FEED_OBJ_TIP', 'UI_SENTI_OBJ_TIP', 'UI_FREI_D_OBJ_TIP', 'UI_BUILD_OBJ2_TIP', 'UI_MISSING_OBJ_TIP', 'UI_PRED_KILL_OBJ_TIP', 'UI_HIDE_SEEK_OBJ_TIP', 'UI_DELIVERY_OBJ_TIP', 'UI_REPAIR_OBJ_TIP', 'UI_PHOTO_CRE_OBJ_TIP', 'UI_BNTY_EASY_OBJ_TIP', 'UI_SCAN_MIN_OBJ_TIP', 'UI_DIGGING_OBJ2_TIP', 'UI_BNTY_MED_OBJ_TIP', 'UI_DEPOT_OBJ_TIP', 'UI_COLLECT_OBJ_TIP', 'UI_BUILD_OBJ3_TIP', 'UI_PHOTO_BIO_GUIDED_OBJ_TIP', 'UI_BNTY_HARD_OBJ_TIP', 'UI_SCAN_CRE_OBJ_TIP', 'UI_FREI_A_OBJ_TIP', 'UI_RETURN_MISSION_OBJ_TIP', 'UI_BONES_OBJ1_TIP', 'UI_BONES_OBJ3_TIP', 'UI_SCAN_TREE_OBJ_TIP', 'UI_FIEND_KILL_OBJ_TIP']
+|-
+| HasCategoryOverride                    || ['True', 'False']
+|-
+| OverrideCategory                       || ['GcMissionCategory.xml']
+|-
+| HasColourOverride                      || ['False']
+|-
+| ColourOverride                         || ['Colour.xml']
+|-
+| PrefixTitleText                        || ['']
+|-
+| BlockPinning                           || ['False']
+|-
+| RepeatLogic                            || ['Loop', 'None']
+|-
+| IconStyle                              || ['Default']
+|-
+| SpecialButtonIcon                      || ['TkInputEnum.xml']
+|-
+| InputButton                            || ['None']
+|-
+| ObjectiveFormatting                    || ['GcObjectiveTextFormatOptions.xml']
+|-
+| ObjectivesCanBeFormattedBySequences    || ['True', 'False']
+|-
+| FormattableObjective                   || ['', 'UI_PHOTO_BIO_GUIDED_OBJ2_ALT', 'UI_COLLECT_OBJ_FORMAT']
+|-
+| FormattableObjectiveTip                || ['', 'UI_COLLECT_OBJ_FORMAT_TIP', 'UI_PHOTO_BIO_GUIDED_OBJ2_TIP']
+|-
+| CustomNotifyTimers                     || ['GcCustomNotifyTimerOptions.xml']
+|-
+| HasCustomNotifyTimer                   || ['False']
+|-
+| NotifyDisplayTime                      || ['20']
+|-
+| NotifyPauseTime                        || ['30']
+|-
+| Time                                   || ['0', '3', '2.5', '1.5', '2', '6', '7', '0.66', '0.5', '1', '1.8']
+|-
+| SuppressMessages                       || ['False']
+|-
+| MissionUpdateMessage                   || ['Start', 'End']
+|-
+| CustomMessageLocID                     || ['', 'UI_MISSION_START_PRIMARY']
+|-
+| SetMissionSelected                     || ['True', 'False']
+|-
+| WaitForMessageOver                     || ['True', 'False']
+|-
+| ShowChangeMissionNotify                || ['False']
+|-
+| PlayMusicSting                         || ['Start', 'End', 'None']
+|-
+| MessageGetToSpace                      || ['UI_FREI_ENGAGE_MSG', 'UI_BNTY_HARD_OBJ1_MSG', 'UI_BNTY_MED_OBJ1_MSG', 'UI_BNTY_EASY_OBJ1_MSG']
+|-
+| MessageEngage                          || ['UI_BNTY_EASY_OBJ2_MSG', 'UI_BNTY_HARD_OBJ2_MSG', 'UI_BNTY_MED_OBJ2_MSG']
+|-
+| MessageDestroy                         || ['UI_BNTY_EASY_OBJ3_MSG', 'UI_BNTY_HARD_OBJ3_MSG', 'UI_BNTY_MED_OBJ3_MSG']
+|-
+| Bounty                                 || ['HARDBOUNTY1', 'EASYBOUNTY1', 'MEDBOUNTY1']
+|-
+| Participant                            || ['GcPlayerMissionParticipantType.xml']
+|-
+| ParticipantType                        || ['Secondary2', 'MissionGiver', 'Secondary3', 'Primary', 'None', 'Secondary1']
+|-
+| Event                                  || ['SE_DELIVER_LOCAL', 'SE_PHOTO_BIOME_LAVA', 'SE_PHOTO_BIOME_WEIRD', 'SE_MISSION_GRAB_REPAIR2', 'SE_HAND_IN_TREE_SCAN', 'SE_HAND_IN_PRED_HUNT', 'SE_BONE_TERMINAL', 'SE_HIDE_SEEK_FIND', 'SE_DIG_CLUE_MAIN', 'SE_HAND_IN_REPAIR', 'SE_HIDE_SEEK_TIMED', 'SE_FIND_BONES', 'SE_PHOTO_BIOME_SWAMP', 'SE_DEP_RAID_TARGET_GRAB2', 'SE_HAND_IN_FACT_RAID', 'SE_FACT_RAID_TARGET_GRAB2', 'SE_HAND_IN_BOUNTY3', 'SE_HAND_IN_KILL_ROBOT_MED', 'SE_FACT_RAID_TARGET_TIMED2', 'SE_HAND_IN_COLLECT4', 'SE_HAND_IN_DEP_RAID', 'SE_COLLECT_DELIVERY1', 'SE_DIG_CLUE', 'SE_HAND_IN_COLLECT1', 'SE_HAND_IN_FREI_D', 'SE_HAND_IN_MISSING_PERSON', 'SE_DELIVERY_NOITEM', 'SE_HAND_IN_BOUNTY2', 'SE_PHOTO_BIOME_RADIO', 'SE_GRAB_HIDE_BRIBE', 'SE_MISSION_GRAB_REPAIR3', 'SE_MISSION_GRAB_REPAIR1', 'SE_HAND_IN_COLLECT3', 'SE_HAND_IN_KILL_ROBOT_HARD', 'SE_PHOTO_BIOME_DUST', 'SE_HAND_IN_PHOTO1', 'SE_HAND_IN_BOUNTY1', 'SE_COLLECT_DELIVERY4', 'SE_PHOTO_BIOME_TOX', 'SE_DELIVER_HANDIN2', 'SE_HAND_IN_REPAIR3', 'SE_DELIVERY_NOITEM2', 'SE_HAND_IN_CREFEED', 'SE_CONSTRUCTION_TARGET', 'SE_DELIVER_MB2', 'SE_DELIVER_MB', 'SE_HAND_IN_CRE_SCAN', 'SE_HAND_IN_REPAIR1', 'SE_HAND_IN_HIDE_SEEK2', 'SE_FACT_RAID_TARGET_GRAB3', 'SE_FIEND_KILL_HAND_IN', 'SE_FIND_FIEND', 'SE_COLLECT_DELIVERY3', 'SE_PHOTO_BIOME_COLD', 'SE_PHOTO_BIOME_LUSH', 'SE_DELIVER_HANDIN', 'SE_HAND_IN_PHOTO3', 'SE_DIG_TERMINAL', 'SE_HAND_IN_KILL_ROBOTS', 'SE_HAND_IN_DEP_RAID2', 'SE_HAND_IN_DIGGING', 'SE_HAND_IN_CRE_HUNT', 'SE_HAND_IN_FACT_RAID2', 'SE_HAND_IN_FACT_RAID3', 'SE_DELIVER_LOCAL2', 'SE_GRAB_HIDE_SEEK2', 'SE_FACT_RAID_TARGET_TIMED', 'SE_PHOTO_BIOME_HOT', 'SE_HAND_IN_REPAIR2', 'SE_DIG_MAINSITE', 'SE_COLLECT_DELIVERY2', 'SE_HAND_IN_FREI_A', 'SE_HAND_IN_HIDE_SEEK1', 'SE_HAND_IN_COLLECT2', 'SE_CONSTRUCTION_HAND_IN', 'SE_HAND_IN_BONES', 'SE_HAND_IN_MIN_SCAN', 'SE_FACT_RAID_TARGET_GRAB', 'SE_DEP_RAID_TARGET_GRAB', 'SE_GRAB_MISSING_PERSON', 'SE_HAND_IN_PHOTO2', 'SE_PHOTO_BIOME_DEAD']
+|-
+| AllowOtherPlayerBase                   || ['False']
+|-
+| Message                                || ['', 'UI_DIGGING_OBJ4_MSG', 'FACTMED_WIN', 'UI_FREI_D_OBJ1_MSG', 'UI_HIDE_SEEK_TIMED_MSG', 'UI_DIGGING_OBJ5_MSG', 'UI_FREI_A_OBJ1_MSG', 'UI_SCAN_MIN_OBJ1_MSG', 'FREI_WN_LOSE', 'UI_FREI_D_OBJ1_MARKER', 'UI_SCAN_CRE_OBJ1_MSG', 'UI_PHOTO_CRE_OBJ_MSG1', 'UI_BONES_OBJ1_MSG', 'UI_DEPOT_OBJ1_MSG2', 'UI_BUILD_OBJ2_MSG', 'UI_MISSING_OBJ1_MSG', 'UI_BONES_OBJ4_MSG', 'DEL_COMPLETE', 'UI_COLLECT_OBJ1_MSG2', 'UI_DIGGING_OBJ3_MSG', 'UI_BUILD_OBJ3_MSG', 'UI_BONES_OBJ2_MSG', 'UI_SENTI_OBJ1_MSG', 'UI_SCANEVENT_GOTO_MAP', 'ARTIFACT_FOUND', 'UI_DEPOT_OBJ1_MSG1', 'UI_PHOTO_BIO_GUIDED_OBJ_MSG1A', 'UI_BUILD_OBJ1_MSG', 'UI_HIDE_SEEK_OBJ_TIP', 'UI_FIEND_KILL_OBJ1_MSG', 'UI_DELIVERY_OBJ1_MSG', 'UI_CRE_KILL_OBJ1_MSG_ALT', 'UI_DIGGING_OBJ6_MSG', 'FACTHARD_WIN', 'UI_COLLECT_OBJ1_MSG3A', 'FACTHARD_LOSE', 'UI_REWARD_FAILED_MSG', 'UI_RETURN_MISSION_OBJ1_MSG', 'UI_REPAIR_OBJ1_MSG', 'UI_BUILD_OBJ1A_MSG', 'UI_COLLECT_OBJ1_MSG4B', 'UI_PHOTO_BLD_OBJ_MSG1', 'UI_PRED_KILL_OBJ1_MSG', 'CONSTRUCT_DONE', 'UI_HIDE_SEEK_OBJ', 'UI_BUILD_OBJ4A_MSG', 'UI_FACTORY_OBJ1_MSG', 'PROC_BONES_A', 'UI_FACTORY_TIMED_OBJ1_MSG', 'UI_COLLECT_OBJ1_MSG1', 'UI_SCAN_TREE_OBJ1_MSG', 'FREI_A_TIMEOUT', 'UI_DIGGING_OBJ1_MSG', 'UI_BUILD_OBJ5_MSG', 'TIMEOUT', 'UI_DIGGING_OBJ2_MSG', 'UI_BONES_OBJ3_MSG', 'UI_FIEND_KILL_OBJ2_MSG', 'UI_FREI_A_OBJ1_MSG2', 'UI_BUILD_OBJ4B_MSG', 'UI_COLLECT_OBJ1_MSG4A', 'FREI_D_TIMEOUT', 'UI_DIGGING_OBJ2A_MSG', 'UI_BUILD_OBJ4_MSG', 'FREI_MB_WIN', 'UI_CRE_FEED_OBJ1_MSG', 'UI_COLLECT_OBJ1_MSG3B', 'PROC_BONES_B', 'UI_SENTI_HARD_OBJ1_MSG', 'UI_PHOTO_BIO_GUIDED_OBJ2_MSG', 'DEL_COMPLETE2', 'FACTMED_LOSE']
+|-
+| Reward                                 || ['MB_STAND_LOW', 'FACTHARD_CANCEL', 'DEL_ITEM_R2', 'FACTMED_CANCEL', 'MB_STAND_MED', 'R_FREI_WIN', 'FACTHARD_WANTED', 'GcRewardWantedLevel.xml', 'MB_STAND_HIGH', 'R_MB_MEGA', 'R_DEL_CHIT2', 'DEL_ITEM_R', 'GcRewardSpecificProduct.xml', 'R_DEPOT_WANTED', 'R_MB_LOW', 'GcRewardMissionMessageSeeded.xml', 'R_MB_HIGH', 'R_FREI_CANCEL', 'R_DEL_CHIT1', 'R_MB_MED']
+|-
+| CanOverride                            || ['False']
+|-
+| ForcesPageHint                         || ['False']
+|-
+| ForcesBuildMenuHint                    || ['False']
+|-
+| IsProceduralAllowed                    || ['False']
+|-
+| IsRecurring                            || ['False']
+|-
+| IsLegacy                               || ['False']
+|-
+| BlocksPinning                          || ['False']
+|-
+| TelemetryUpload                        || ['False']
+|-
+| PerPlanet                              || ['False']
+|-
+| DiscoverTarget                         || ['Mineral', 'Animal', 'Vegetable']
+|-
+| AmountMin                              || ['3', '25', '50', '5', '10', '2', '6', '1', '250']
+|-
+| AmountMax                              || ['3', '25', '50', '5', '15', '2', '8', '4', '7', '1', '250']
+|-
+| KillTarget                             || ['Quads', 'Predators', 'Creatures', 'Robots', 'Fiends']
+|-
+| Product                                || ['TRA_COMPONENT4', 'TRA_COMPONENT1', 'TRA_ALLOY5', 'TRA_COMMODITY3', 'TRA_ENERGY3', 'REACTION1', 'TRA_COMPONENT2', 'FARMPROD6', 'TRA_COMMODITY5', 'TRA_TECH5', 'TRA_EXOTICS1', 'TRA_COMMODITY1', 'TRA_EXOTICS2', 'TRA_ALLOY3', 'TRA_EXOTICS5', 'ARTIFACT_KEY', 'TRA_ENERGY1', 'TRA_TECH1', 'TRA_ALLOY4', 'TRA_COMPONENT3', 'NANOTUBES', 'TRA_EXOTICS4', 'FARMPROD4', 'GcProductTableEnum.xml', 'FARMPROD1', 'ANTIMATTER', 'TRA_EXOTICS3', 'TRA_CURIO2', 'TRA_ENERGY5', 'POWERCELL', 'CASING', 'TRA_COMPONENT5', 'TRA_MINERALS1', 'TRA_TECH4', 'TRA_COMMODITY2', 'FARMPROD2', 'TRA_MINERALS5', 'TRA_ALLOY1', 'REACTION2', 'TRA_MINERALS2', 'TRA_MINERALS4', 'REACTION3', 'TRA_COMMODITY4', 'TRA_TECH2', 'TRA_ENERGY2', 'TRA_ENERGY4', 'TRA_MINERALS3', 'TRA_TECH3', 'TRA_ALLOY2', 'FARMPROD3', 'None', 'FARMPROD5', 'MICROCHIP']
+|-
+| ProgressionIndex                       || ['-1']
+|-
+| MinProgressionForSelection             || ['0']
+|-
+| Id                                     || ['', 'DELIVERY_NOITEM1', 'FACTHARD_CANCEL', 'DEL_ITEM_R2', 'FACTMED_CANCEL', 'R_FREI_WIN', 'DELIVERY_SHOP', 'C_COLLECT1', 'FACTHARD_WANTED', 'DEL_COST2', 'DELIVERY_NOITEM2', 'COLLECT_DELIVERY_STEP2', 'DELIVERY_SHOP2', 'R_DEL_CHIT2', 'COLLECT_DELIVERY_STEP4', 'DEL_ITEM_R', 'C_COLLECT2', 'POLICE_TOKEN', 'DEL_COST', 'R_DEPOT_WANTED', 'COLLECT_DELIVERY_STEP1', 'R_DELMESSAGE', 'D_DIG_TERMINAL', 'C_COLLECT4', 'R_DELMESSAGE2', 'R_FREI_CANCEL', 'R_DEL_CHIT1', 'COLLECT_DELIVERY_STEP3', 'D_BONE_TERMINAL', 'C_COLLECT3']
+|-
+| Race                                   || ['GcAlienRace.xml']
+|-
+| Category                               || ['GcMissionCategory.xml', 'GcAlienPuzzleCategory.xml']
+|-
+| AlienPuzzleCategory                    || ['Default']
+|-
+| AdditionalOptions                      || ['None']
+|-
+| Title                                  || ['', 'NPC_DIGGING_TITLE']
+|-
+| Text                                   || ['', 'ALL_MISSION_DELIVER_DESC2', 'ALL_MISSION_DELIVER_DESC3', 'ALL_MISSION_DELIVER_DESC_FAIL', 'ALL_MISSION_DELIVER_DESC4', 'NPC_DIGGING_RES', 'MISSION_DELIVER_RES_A', 'NPC_DIGGING_LANG', 'ALL_MISSION_DELIVER_DESC1']
+|-
+| TextAlien                              || ['ALL_MISSION_DELIVER_LANG5', 'ALL_MISSION_DELIVER_LANG7', 'ALL_MISSION_DELIVER_LANG6', 'ALL_MISSION_DELIVER_LANG1', 'ALL_MISSION_DELIVER_LANG4', 'ALL_MISSION_DELIVER_LANG3']
+|-
+| TranslateAlienText                     || ['False']
+|-
+| TranslationBrackets                    || ['False']
+|-
+| ProgressiveDialogue                    || ['True', 'False']
+|-
+| RequiresScanEvent                      || ['']
+|-
+| IsAlien                                || ['True', 'False']
+|-
+| Cost                                   || ['', 'GcCostProduct.xml', 'C_COLLECT1', 'C_COLLECT2', 'GcCostSubstance.xml', 'DEL_COST', 'DEL_COST2', 'C_COLLECT4', 'C_COLLECT3']
+|-
+| Value                                  || ['R_DELMESSAGE2', 'R_DELMESSAGE']
+|-
+| Mood                                   || ['GcAlienMood.xml', 'Neutral']
+|-
+| Prop                                   || ['GcNPCPropTypes.xml']
+|-
+| NPCProp                                || ['DontCare']
+|-
+| KeepOpen                               || ['False']
+|-
+| DisplayCost                            || ['True']
+|-
+| TruncateCost                           || ['False']
+|-
+| MarkInteractionComplete                || ['True', 'False']
+|-
+| NextInteraction                        || ['']
+|-
+| SelectedOnBackOut                      || ['True', 'False']
+|-
+| AudioEvent                             || ['GcAudioWwiseEvents.xml']
+|-
+| EnablingConditionTest                  || ['GcMissionConditionTest.xml']
+|-
+| EnablingConditionId                    || ['']
+|-
+| WordCategory                           || ['GcWordCategoryTableEnum.xml', 'MISC']
+|-
+| PersistancyBufferOverride              || ['None']
+|-
+| CustomFreighterTextIndex               || ['-1']
+|-
+| Common                                 || ['GcRewardTableItemList.xml']
+|-
+| RewardChoice                           || ['GiveAll']
+|-
+| OverrideZeroSeed                       || ['False']
+|-
+| PercentageChance                       || ['100']
+|-
+| Default                                || ['GcDefaultMissionProductEnum.xml', 'GcDefaultMissionSubstanceEnum.xml']
+|-
+| DefaultProductType                     || ['PrimaryProduct', 'None']
+|-
+| ForceSpecialMessage                    || ['False']
+|-
+| LabelID                                || ['', 'SetWanted', 'Give police token', 'Win Message', 'CancelMessage', 'Send Del Message', 'Delivery message', 'Give delivery item', 'Lose Message']
+|-
+| MessageID                              || ['CONSTRUCT_DONE', 'FACTHARD_LOSE', 'FREI_WN_LOSE', 'FREI_MB_WIN', 'DEL_COMPLETE2', 'FACTMED_LOSE', 'DEL_COMPLETE']
+|-
+| BroadcastInMultiplayer                 || ['False']
+|-
+| DontCharge                             || ['False']
+|-
+| HideOptionAndDisplayCostOnly           || ['False']
+|-
+| RemoveOptionIfCantAfford               || ['False']
+|-
+| MustAffordInCreative                   || ['False']
+|-
+| Amount                                 || ['3', '50', '2', '6', '4', '1', '250']
+|-
+| GalaxyMapMessage                       || ['UI_SCANEVENT_GOTO_MAP']
+|-
+| Timeout                                || ['0', '80', '25', '65']
+|-
+| DistanceTimeout                        || ['True', 'False']
+|-
+| TimeoutOSD                             || ['', 'SIGNAL_TIME_FAIL', 'UI_HIDE_SEEK_FAIL_OSD']
+|-
+| UseGPSInText                           || ['GcScanEventGPSHint.xml']
+|-
+| ScanEventGPSHint                       || ['None']
+|-
+| Distance                               || ['30', '25', '50', '55', '20', '35', '60']
+|-
+| EndEventWhenReached                    || ['True', 'False']
+|-
+| Percent                                || ['75', '10']
+|-
+| Seeded                                 || ['True']
+|-
+| MissionPlayerLocation                  || ['InShipInSpace', 'OnPlanet']
+|-
+| ScanCargo                              || ['True']
+|-
+| NumSquads                              || ['-1']
+|-
+| AttackDefinition                       || ['']
+|-
+| RewardMessageOverride                  || ['']
+|-
+| ForceSearchFreighterAndChests          || ['False']
+|-
+| SearchEveryShip                        || ['False']
+|-
+| Substance                              || ['TOXIC1', 'GcSubstanceTableEnum.xml', 'DUSTY1', 'PLANT_DUST', 'CAVE2', 'PLANT_LUSH', 'STELLAR2', 'WATER2', 'HOT1', 'PLANT_TOXIC', 'ROBOT1', 'RADIO1', 'PLANT_SNOW', 'PLANT_POOP', 'COLD1', 'LUSH1', 'CREATURE1', 'PLANT_CAVE', 'PLANT_HOT', 'None', 'PLANT_RADIO']
+|-
+| DefaultSubstanceType                   || ['PrimarySubstance', 'None']
+|-
+| WaitForSelected                        || ['True']
+|-
+| ForBuild                               || ['']
+|-
+| ForRepair                              || ['']
+|-
+| FromNow                                || ['False']
+|-
+| TeachIfNotKnown                        || ['False']
+|-
+| Technology                             || ['GcTechnologyTableEnum.xml', 'SHIPSCAN_ECON']
+|-
+| AllowPartiallyInstalled                || ['False']
+|-
+| OSDTime                                || ['6', '4', '5']
+|-
+| OSDMessageSubtitle                     || ['']
+|-
+| OSDMessageColour                       || ['Colour.xml']
+|-
+| OSDMessageStyle                        || ['Standard']
+|-
+| OSDUseMissionIcon                      || ['True', 'False']
+|-
+| DisableIcon                            || ['False']
+|-
+| DisableTitlePrefix                     || ['False']
+|-
+| Level                                  || ['2', '4', '0']
+|-
+| Test                                   || ['TkEqualityEnum.xml']
+|-
+| EqualityEnum                           || ['Greater', 'GreaterEqual', 'Equal']
+|-
+| EngageDistance                         || ['10000']
+|-
+| EngageTime                             || ['300']
+|-
+| TimeAfterWarp                          || ['8']
+|-
+| TimeoutMessage                         || ['FREI_D_TIMEOUT', 'FREI_A_TIMEOUT']
+|-
+| TimeoutOSDMessage                      || ['UI_FREI_A_TIMEOUT_OSD', 'UI_FREI_D_TIMEOUT_OSD']
+|-
+| FreighterBattleStatus                  || ['Active']
+|-
+| FreighterBattleDistance                || ['-1']
+|-
+| FreighterBattleTest                    || ['TkEqualityEnum.xml']
+|-
+| AIFaction                              || ['Pirate']
+|-
+| WaitMessageID                          || ['UPLOADED_BASE', 'SALVAGE_DONE']
+|-
+| StatusMessageMissionMarkup             || ['GcStatusMessageMissionMarkup.xml']
+|-
+| MissionMarkup                          || ['None']
+|-
+| MessageSecondary                       || ['', 'UI_PHOTO_BIO_GUIDED_OBJ2_MSG2']
+|-
+| MessageSuccess                         || ['UI_PHOTO_SUCCESS']
+|-
+| CreatureArea                           || ['GcPhotoCreature.xml']
+|-
+| PhotoCreatureType                      || ['Ground', 'Water']
+|-
+| PhotoBuildingType                      || ['Portal', 'Depot', 'Abandoned', 'Shop', 'MissionTower', 'Factory', 'RadioTower', 'Observatory', 'Outpost', 'Ruin', 'Shelter', 'Monolith']
+|-
+| RequireSpecificBait                    || ['False']
+|-
+| Amountmax                              || ['12']
+|-
+| Stat                                   || ['TREASURE_FOUND']
+|-
+| StatGroup                              || ['GLOBAL_STATS']
+|-
+| ResourceHint                           || ['UI_BONES_HINT']
+|-
+| AllowInShip                            || ['False']
+|-
+| BaseSearchFilter                       || ['GcBaseSearchFilter.xml']
+|-
+| OnCurrentPlanet                        || ['True']
+|-
+| InCurrentSystem                        || ['False']
+|-
+| IsOverlapping                          || ['False']
+|-
+| OnSpecificPlanet                       || ['0']
+|-
+| InSpecificSystem                       || ['0']
+|-
+| OnSpecificPlanetScanEvent              || ['']
+|-
+| PersistentBaseTypes                    || ['FriendsPlanetBase', 'HomePlanetBase']
+|-
+| BasePartFilter                         || ['GcBasePartSearchFilter.xml']
+|-
+| IsSpecificID                           || ['']
+|-
+| PartIsOnline                           || ['False']
+|-
+| PartIsNotOnline                        || ['False']
+|-
+| ApplyGridFilter                        || ['False']
+|-
+| BaseGridFilter                         || ['GcBaseGridSearchFilter.xml']
+|-
+| NetworkType                            || ['GcLinkNetworkTypes.xml']
+|-
+| LinkNetworkType                        || ['Power']
+|-
+| PartRateIsGreaterThan                  || ['-99999']
+|-
+| PartRateIsLessThan                     || ['99999']
+|-
+| GridRateIsGreaterThan                  || ['-99999']
+|-
+| GridRateIsLessThan                     || ['99999']
+|-
+| GridHasANegativeRate                   || ['False']
+|-
+| GridHasAPositiveRate                   || ['False']
+|-
+| GridIsOnline                           || ['False']
+|-
+| GridIsNotOnline                        || ['False']
+|-
+| GridHasMinParts                        || ['0']
+|-
+| GridHasMaxParts                        || ['99999']
+|-
+| GridHasMinNonPassiveParts              || ['0']
+|-
+| GridHasMaxNonPassiveParts              || ['99999']
+|-
+| GridHasPositiveRatePotential           || ['False']
+|-
+| ContainsMinParts                       || ['0']
+|-
+| ContainsMaxParts                       || ['99999']
+|-
+| MinBasesFound                          || ['1']
+|-
+| MaxBasesFound                          || ['99999']
+|-
+| SearchDistanceLimit                    || ['8.999999E+09']
+|-
+| PartID                                 || ['BASE_FLAG']
+|-
+| NumUniquePartsRequired                 || ['3', '1']
+|-
+| Part                                   || ['BIOROOM', 'CORRIDOR', 'WALLLIGHTBLUE', 'MAINROOMCUBE', 'MAINROOM', 'MESSAGE', 'BUILDBED', 'BUILDDOOR', 'BUILDLIGHT', 'PLANTPOT1', 'FLAG2', 'DOOR2', 'FLAG1', 'CUBEGLASS', 'CUBEROOM']
+|-
+| BuildPartSearchType                    || ['Base']
+|-
+| IncludeOnlyOverlappingBases            || ['False']
+|-
+| IncludeGlobalBaseObjects               || ['True']
+|-
+| Multiplayer                            || ['False']
+|}
