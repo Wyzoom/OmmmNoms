@@ -3,63 +3,101 @@
 |-
 ! Types of MissionSequence
 |-
-| GcMissionSequenceWaitForMessage.xml
+| GcMissionSequenceWaitForScanEvent.xml
 |-
-| GcMissionSequenceAudioEvent.xml
-|-
-| GcMissionSequenceStartScanEvent.xml
-|-
-| GcMissionSequenceFreighterEngage.xml
-|-
-| GcMissionSequenceWaitForStat.xml
-|-
-| GcGenericMissionSequence.xml
-|-
-| GcMissionSequenceCollectProduct.xml
-|-
-| GcMissionSequenceWaitForConditions.xml
-|-
-| GcMissionSequenceWaitForPhoto.xml
-|-
-| GcMissionSequenceReward.xml
+| GcMissionSequencePirates.xml
 |-
 | GcMissionSequenceWaitForCompletionMessage.xml
 |-
-| GcMissionSequenceCollectSubstance.xml
-|-
-| GcMissionSequenceWait.xml
-|-
-| GcMissionSequenceConstruct.xml
-|-
-| GcMissionSequenceDiscover.xml
-|-
-| GcMissionSequenceShowMissionUpdateMessage.xml
-|-
-| GcMissionSequenceGroup.xml
-|-
 | GcMissionSequenceKill.xml
 |-
-| GcMissionSequenceGetToScanEvent.xml
+| GcMissionSequenceDetailMessage.xml
 |-
-| GcMissionSequenceWaitForScanEvent.xml
-|-
-| GcMissionSequenceStop.xml
-|-
-| GcMissionSequenceFeed.xml
-|-
-| GcMissionSequenceWaitForDepots.xml
+| GcMissionSequenceWaitForMessage.xml
 |-
 | GcMissionSequenceEndScanEvent.xml
 |-
-| GcMissionSequenceBounty.xml
+| GcMissionSequenceBroadcastMessage.xml
+|-
+| GcMissionSequenceWaitForDepots.xml
 |-
 | GcMissionSequenceWaitForFreighterPods.xml
 |-
+| GcMissionSequenceDiscover.xml
+|-
+| GcMissionSequenceCloseMenu.xml
+|-
+| GcMissionSequenceSuppressMarkers.xml
+|-
+| GcMissionSequenceGroup.xml
+|-
+| GcMissionSequenceCommunicator.xml
+|-
+| GcGenericMissionSequence.xml
+|-
+| GcMissionSequenceWaitForStat.xml
+|-
+| GcMissionSequenceDoMissionsForFaction.xml
+|-
+| GcMissionSequenceReward.xml
+|-
+| GcMissionSequenceDetailMessagePoint.xml
+|-
+| GcMissionSequenceGetToScanEvent.xml
+|-
+| GcMissionSequenceAudioEvent.xml
+|-
+| GcMissionSequenceShowMissionUpdateMessage.xml
+|-
+| GcMissionSequenceCollectMoney.xml
+|-
+| GcMissionSequenceScan.xml
+|-
+| GcMissionSequenceStartScanEvent.xml
+|-
+| GcMissionSequenceFeed.xml
+|-
+| GcMissionSequenceCollectProduct.xml
+|-
+| GcMissionSequenceStop.xml
+|-
+| GcMissionSequenceLearnWords.xml
+|-
+| GcMissionSequenceCollectSubstance.xml
+|-
+| GcMissionSequenceWaitForFactionStanding.xml
+|-
+| GcMissionSequenceWait.xml
+|-
+| GcMissionSequenceFreighterEngage.xml
+|-
+| GcMissionSequenceSetCurrentMission.xml
+|-
+| GcMissionSequenceWaitForPhoto.xml
+|-
+| GcMissionSequenceCompleteMission.xml
+|-
+| GcMissionSequenceTeleport.xml
+|-
 | GcMissionSequenceShowMessage.xml
 |-
-| GcMissionSequenceBroadcastMessage.xml
+| GcMissionSequenceWaitForPortalWarp.xml
+|-
+| GcMissionSequenceWaitForWarps.xml
+|-
+| GcMissionSequenceExplorationLogSpecial.xml
+|-
+| GcMissionSequenceGetInShip.xml
+|-
+| GcMissionSequenceWaitForConditions.xml
 |-
 | GcMissionSequenceWaitForShips.xml
 |-
-| GcMissionSequencePirates.xml
+| GcMissionSequenceConstruct.xml
+|-
+| GcMissionSequenceBounty.xml
+|-
+| GcMissionSequenceBuild.xml
+|-
+| GcMissionSequenceStartMission.xml
 |}
